@@ -224,7 +224,7 @@ const villains = [
         name: "Girafales Colorado",
         image: "personagens/girafales_colorado.png",
         hp: 900,
-        attackDamage: 40,
+        attackDamage: 30,
         description: "Uma versão do Professor Girafales que usa sua inteligência para o mal.",
     },
 ];
@@ -377,7 +377,7 @@ function playerAttack() {
             logMessage = `Dr. Chapatin aplicou uma Injeção Dolorosa, causando ${damage} de dano e envenenando o inimigo!`;
             break;
         case 'chaves':
-            damage = 20;
+            damage = 40;
             logMessage = `Chaves usou o Piripaque e causou ${damage} de dano!`;
             break;
         case 'chaparron_bonaparte':
@@ -415,7 +415,7 @@ function playerAttack() {
             logMessage = `Peterete X usou o Plano Perigoso e causou ${damage} de dano!`;
             break;
         case 'racha_cuca_x':
-            damage = 35;
+            damage = 40;
             logMessage = `Racha Cuca X usou o Ataque de Racha Cuca e causou ${damage} de dano!`;
             break;
     }

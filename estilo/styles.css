@@ -1,0 +1,277 @@
+:root {
+    --primary-font: 'Press Start 2P', cursive;
+    --secondary-font: 'Chilanka', cursive;
+    --background-color: #f0e68c; /* Khaki */
+    --container-color: #d2b48c; /* Tan */
+    --text-color: #3d2b1f; /* Bistre */
+    --accent-color: #8b4513; /* SaddleBrown */
+    --button-bg: #e67e22; /* Carrot */
+    --button-hover-bg: #d35400; /* Pumpkin */
+}
+
+body {
+    font-family: var(--secondary-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('../cenarios/flying_bus.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#game-container {
+    background-color: rgba(210, 180, 140, 0.9); /* Semi-transparent Tan */
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 5px solid var(--accent-color);
+    text-align: center;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+h1, h2 {
+    font-family: var(--primary-font);
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+#game-logo {
+    max-width: 80%;
+    height: auto;
+}
+
+.story-intro {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto 30px auto;
+    max-width: 600px;
+}
+
+.btn {
+    font-family: var(--primary-font);
+    background-color: var(--button-bg);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.character-card {
+    background-color: var(--background-color);
+    border: 3px solid var(--accent-color);
+    border-radius: 10px;
+    width: 150px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.character-card.locked {
+    cursor: not-allowed;
+    filter: grayscale(80%) brightness(0.7);
+}
+
+/* Updated lock icon to use SVG for better compatibility */
+.character-card.locked .lock-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="color:rgba(0,0,0,0.5);filter:drop-shadow(1px 1px 5px white);"><path d="M12 1L12 1C8.68 1 6 3.68 6 7V9H5C3.9 9 3 9.9 3 11V21C3 22.1 3.9 23 5 23H19C20.1 23 21 22.1 21 21V11C21 9.9 20.1 9 19 9H18V7C18 3.68 15.32 1 12 1ZM12 3C14.21 3 16 4.79 16 7V9H8V7C8 4.79 9.79 3 12 3Z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.character-card.locked:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.character-card.selected {
+    border-color: var(--button-bg);
+    box-shadow: 0 0 20px var(--button-bg);
+    transform: scale(1.1);
+}
+
+.character-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.character-card h3 {
+    margin: 0;
+    font-family: var(--primary-font);
+    font-size: 0.9rem;
+}
+
+.battle-arena {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.character-battle-card {
+    background-color: var(--background-color);
+    border: 3px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-battle-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.character-battle-card h3 {
+    font-family: var(--primary-font);
+    margin: 0 0 10px 0;
+}
+
+.hp-text {
+    font-family: var(--primary-font);
+    font-size: 0.8rem;
+    color: var(--text-color);
+    background: rgba(255,255,255,0.5);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.health-bar-container {
+    width: 100%;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid var(--text-color);
+}
+
+.health-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #2ecc71; /* Green */
+    transition: width 0.5s ease-in-out;
+}
+
+.vs-text {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    align-self: center;
+    color: var(--accent-color);
+}
+
+#battle-controls {
+    margin-bottom: 20px;
+}
+
+#battle-log {
+    background: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 80px;
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+#game-over-screen h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+#game-over-screen p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#unlock-announcement {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#unlock-announcement p {
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+#unlock-announcement .character-card.unlocked {
+    background-color: #fffbe0;
+    border-color: #f1c40f;
+    cursor: default;
+    box-shadow: 0 0 20px #f1c40f;
+}
+
+#character-selection-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    min-height: 1.5em;
+}

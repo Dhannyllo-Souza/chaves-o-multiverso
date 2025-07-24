@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaves: Multiverso das Chaves</title>
+    <link rel="stylesheet" href="estilo/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Press+Start2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <section id="start-screen" class="screen active">
+            <div class="logo-container">
+                <img src="cenarios/chaves_logo.png" alt="Logo do Jogo" id="game-logo">
+            </div>
+            <h1>Chaves: O Multiverso</h1>
+            <p class="story-intro">O tempo e o espaço colapsaram! Um ônibus voador misterioso cruza as dimensões para reunir os heróis criados por Roberto Gómez Bolaños. Sua missão: salvar todos os universos perdidos!</p>
+            <button id="start-button" class="btn">Iniciar Aventura</button>
+        </section>
+
+        <section id="character-selection-screen" class="screen">
+            <h2 id="character-selection-title">Escolha seu Mentor</h2>
+            <div id="character-list" class="character-list">
+                </div>
+            <button id="select-character-button" class="btn" disabled>Lutar!</button>
+        </section>
+
+        <section id="battle-screen" class="screen">
+            <div class="battle-arena">
+                <div id="hero-side" class="character-battle-card">
+                    </div>
+                <div class="vs-text">VS</div>
+                <div id="villain-side" class="character-battle-card">
+                    </div>
+            </div>
+            <div id="battle-controls">
+                <button id="attack-button" class="btn attack-btn">Usar Habilidade</button>
+            </div>
+            <div id="battle-log">
+                <p>A batalha começa! O que você vai fazer?</p>
+            </div>
+        </section>
+
+        <section id="game-over-screen" class="screen">
+            <h2 id="game-over-title">Fim de Jogo</h2>
+            <p id="game-over-message">Mensagem de vitória ou derrota.</p>
+            <div id="unlock-announcement"></div>
+            <button id="restart-button" class="btn">Jogar Novamente</button>
+        </section>
+    </div>
+    <script src="js/index.js" type="module"></script>
+</body>
+</html>

@@ -372,7 +372,7 @@ function playerAttack() {
             }
             break;
         case 'dr_chapatin':
-            damage = 5;
+            damage = 20;
             villainPoisonTurns = 2;
             logMessage = `Dr. Chapatin aplicou uma Injeção Dolorosa, causando ${damage} de dano e envenenando o inimigo!`;
             break;
@@ -385,7 +385,7 @@ function playerAttack() {
             logMessage = `Chaparrón Bonaparte usou o Chirrion! e causou ${damage} de dano!`;
             break;
         case 'seu_madruga':
-            damage = 10;
+            damage = 25;
             if (Math.random() < 0.3) {
                 heroEvadeNextAttack = true;
                 logMessage = `Seu Madruga tentou a Fuga do Aluguel! Há uma chance de ele evitar o próximo ataque.`;
@@ -394,7 +394,7 @@ function playerAttack() {
             }
             break;
         case 'professor_girafales':
-            damage = 22;
+            damage = 29;
             if (Math.random() < 0.25) {
                 villainConfused = true;
                 logMessage = `Professor Girafales deu uma lição no inimigo, causando ${damage} de dano e o confundindo!`;

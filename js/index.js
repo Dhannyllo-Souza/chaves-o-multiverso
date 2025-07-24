@@ -1,11 +1,11 @@
 const characters = {
-        chiquinha: {
+    chiquinha: {
         id: 'chiquinha',
         name: "Chiquinha",
         image: "personagens/chiquinha.png",
         ability: "Fúria do Cabelo",
         description: "Ataque rápido que tem chance de atingir duas vezes.",
-        hp: 100,
+        hp: 150,
         locked: false,
     },
     quico: {
@@ -14,7 +14,7 @@ const characters = {
         image: "personagens/quico.png",
         ability: "Chute Quadrado",
         description: "Um chute poderoso que causa dano consistente ao inimigo.",
-        hp: 150,
+        hp: 200,
         locked: false,
     },
     dona_florinda: {
@@ -23,27 +23,26 @@ const characters = {
         image: "personagens/dona_florinda.png",
         ability: "Grito Supersônico",
         description: "Um grito devastador que enfraquece o próximo ataque do inimigo.",
-        hp: 200,
+        hp: 250,
         locked: false,
     },
-         sr_barriga: {
+    sr_barriga: {
         id: 'sr_barriga',
         name: "Sr. Barriga",
         image: "personagens/sr_barriga.png",
         ability: "Livro Místico",
         description: "Usa um feitiço aleatório do livro que pode causar dano massivo ou curá-lo.",
-        hp: 250,
+        hp: 300,
         locked: false,
     },
-   
-    dr_chapatin: {
-        id: 'dr_chapatin',
-        name: "Dr. Chapatin",
-        image: "personagens/dr_chapatin.png",
-        ability: "Injeção Dolorosa",
-        description: "Causa dano contínuo (veneno) por 2 turnos.",
-        hp: 310,
-        locked: true,
+    dona_clotide: {
+        id: 'dona_clotide',
+        name: "Dona Clotilde", // Changed name for consistency
+        image: "personagens/dona_clotide.png",
+        ability: "Ataque de Vassoura",
+        description: "Uma bruxa poderosa com feitiços malignos e uma gargalhada assustadora.", // Added missing comma
+        hp: 350,
+        locked: false,
     },
     chaparron_bonaparte: {
         id: 'chaparron_bonaparte',
@@ -51,7 +50,7 @@ const characters = {
         image: "personagens/chaparron_bonaparte.png",
         ability: "Chirrion!",
         description: "Diz 'Chirrion!' tão repentinamente que causa dano de susto.",
-        hp: 350,
+        hp: 400,
         locked: true,
     },
     seu_madruga: {
@@ -60,16 +59,34 @@ const characters = {
         image: "personagens/seu_madruga.png",
         ability: "Fuga do Aluguel",
         description: "Tenta evitar o ataque inimigo, com chance de não sofrer dano no próximo turno.",
-        hp: 400,
+        hp: 450,
         locked: true,
     },
-     chapolin_colorado: {
+    Alma_Negra_X: { // Changed ID for consistency
+        id: 'alma_negra_x',
+        name: "Alma Negra X",
+        image: "personagens/alma_negra-x.png",
+        ability: "Ataque Brutal",
+        description: "O pirata mais temido dos sete mares, com ataques brutais.", // Added missing comma
+        hp: 500,
+        locked: true,
+    },
+    Racha_Cuca_X: { // Changed ID for consistency
+        id: 'racha_cuca_x',
+        name: "Racha Cuca X",
+        image: "personagens/racha_cuca-x.png",
+        ability: "Ataque de Racha Cuca",
+        description: "Um cientista louco cujas invenções são imprevisíveis e perigosas.", // Added missing comma
+        hp: 550,
+        locked: true,
+    },
+    chapolin_colorado: {
         id: 'chapolin_colorado',
         name: "Chapolin Colorado",
         image: "personagens/chapolin_colorado.png",
         ability: "Marreta Biônica",
         description: "Um golpe com sua marreta que pode atordoar o inimigo, fazendo-o perder a vez.",
-        hp: 450,
+        hp: 600,
         locked: true,
     },
     chaves: {
@@ -78,9 +95,18 @@ const characters = {
         image: "personagens/chaves.png",
         ability: "Piripaque",
         description: "Um ataque de pânico que, de alguma forma, causa dano ao inimigo por pura confusão.",
-        hp: 600,
+        hp: 700,
         locked: true,
     },
+    professor_girafales: { // Added missing character definition
+        id: 'professor_girafales',
+        name: "Professor Girafales",
+        image: "personagens/professor_girafales.png", // Assuming an image for him
+        ability: "Lecionar com Fúria",
+        description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
+        hp: 650,
+        locked: true,
+    }
 };
 
 const villains = [
@@ -126,7 +152,6 @@ const villains = [
         attackDamage: 32,
         description: "Uma bruxa poderosa com feitiços malignos e uma gargalhada assustadora."
     },
-   
     {
         name: "Pistoleiro Veloz",
         image: "personagens/pistoleiro_veloz.png",
@@ -136,24 +161,45 @@ const villains = [
     },
     {
         name: "Poucas Trancas",
-        image: "personagenspoucas_trancas.png",
+        image: "personagens/poucas_trancas.png", // Corrected path
         hp: 500,
         attackDamage: 40,
         description: "Um bandido forte e de poucas palavras. Seus punhos falam por ele."
     },
-     {
+    {
         name: "Alma Negra",
         image: "personagens/alma_negra.png",
         hp: 550,
         attackDamage: 35,
         description: "O pirata mais temido dos sete mares, com ataques brutais."
     },
-     {
+    {
         name: "Dom Caveira",
         image: "personagens/dom_caveira.png",
         hp: 600,
         attackDamage: 30,
         description: "Invoca um espírito que causa dano e tem chance de amedrontar o inimigo.",
+    },
+    {
+        name: "Dr. Chapatin X",
+        image: "personagens/dr_chapatin-x.png",
+        hp: 650,
+        attackDamage: 35, // Ensures attackDamage for a villain
+        description: "Uma versão sombria do Dr. Chapatin, mais perigosa e com poções venenosas.", // More villain-appropriate description
+    },
+    {
+        name: "Chapolin Colorado X", // Corrected name
+        image: "personagens/chapolin_colorado-x.png",
+        hp: 700,
+        attackDamage: 30,
+        description: "Uma versão distorcida do herói, usando sua marreta para o mal.", // More villain-appropriate description
+    },
+    {
+        name: "Chaves X",
+        image: "personagens/chaves-x.png",
+        hp: 800,
+        attackDamage: 30,
+        description: "A versão maligna do Chaves, com piripaques de pura destruição.", // More villain-appropriate description
     },
 ];
 
@@ -299,7 +345,7 @@ function playerAttack() {
                 logMessage += ' O inimigo está atordoado!';
             }
             break;
-        case 'dr_chapatin':
+        case 'dr_chapatin': // This case will never be hit directly if dr_chapatin is not a hero. Keeping it for now.
             damage = 5;
             villainPoisonTurns = 2;
             logMessage = `Dr. Chapatin aplicou uma Injeção Dolorosa, causando ${damage} de dano e envenenando o inimigo!`;
@@ -329,6 +375,18 @@ function playerAttack() {
             } else {
                 logMessage = `Professor Girafales deu uma lição no inimigo, causando ${damage} de dano!`;
             }
+            break;
+        case 'dona_clotide': // New case for Dona Clotilde hero
+            damage = 28;
+            logMessage = `Dona Clotilde usou o Ataque de Vassoura e causou ${damage} de dano!`;
+            break;
+        case 'alma_negra_x': // New case for Alma Negra X hero
+            damage = 30;
+            logMessage = `Alma Negra X usou o Ataque Brutal e causou ${damage} de dano!`;
+            break;
+        case 'racha_cuca_x': // New case for Racha Cuca X hero
+            damage = 35;
+            logMessage = `Racha Cuca X usou o Ataque de Racha Cuca e causou ${damage} de dano!`;
             break;
     }
 
@@ -431,7 +489,10 @@ function endGame(isVictory) {
         saveProgress();
 
         let unlockedHero = null;
-        const heroesToUnlock = Object.values(characters).filter(c => c.locked && !unlockedHeroes.includes(c.id));
+        // Filter out any newly added characters from the initially unlocked list
+        const initialUnlockedHeroes = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'];
+        const heroesToUnlock = Object.values(characters).filter(c => c.locked && !unlockedHeroes.includes(c.id) && !initialUnlockedHeroes.includes(c.id));
+        
         if (heroesToUnlock.length > 0) {
             unlockedHero = heroesToUnlock[0];
             unlockedHeroes.push(unlockedHero.id);
@@ -472,9 +533,13 @@ function resetGame() {
     localStorage.removeItem('game_villain_index');
     currentVillainIndex = 0;
     unlockedHeroes = [];
+    // Reset all characters to locked except the initial ones
+    const initialUnlockedHeroes = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'];
     for (const charId in characters) {
-        if (characters[charId].id !== 'sr_barriga' && characters[charId].id !== 'quico' && characters[charId].id !== 'chiquinha' && characters[charId].id !== 'dona_florinda') {
+        if (!initialUnlockedHeroes.includes(charId)) {
             characters[charId].locked = true;
+        } else {
+            characters[charId].locked = false; // Ensure initial heroes are unlocked
         }
     }
 }
@@ -521,7 +586,10 @@ function populateCharacterSelection() {
 
     for (const charId in characters) {
         const char = characters[charId];
-        const isUnlocked = !char.locked || unlockedHeroes.includes(char.id);
+        // Check if character is initially unlocked OR if it's in the unlockedHeroes list
+        const isInitiallyUnlocked = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'].includes(char.id);
+        const isUnlocked = isInitiallyUnlocked || unlockedHeroes.includes(char.id);
+        
         const card = document.createElement('div');
         card.className = 'character-card';
         if (!isUnlocked) {

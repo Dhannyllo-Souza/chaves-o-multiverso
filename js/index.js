@@ -50,7 +50,7 @@ const characters = {
         image: "personagens/dona_clotide.png",
         ability: "Ataque de Vassoura",
         description: "Uma bruxa com sua vassoura, que ataca com golpes surpreendentes.",
-        hp: 350,
+        hp: 400,
         locked: true,
     },
     chaparron_bonaparte: {
@@ -59,7 +59,7 @@ const characters = {
         image: "personagens/chaparron_bonaparte.png",
         ability: "Chirrion!",
         description: "Diz 'Chirrion!' tão repentinamente que causa dano de susto.",
-        hp: 400,
+        hp: 450,
         locked: true,
     },
     seu_madruga: {
@@ -68,7 +68,7 @@ const characters = {
         image: "personagens/seu_madruga.png",
         ability: "Fuga do Aluguel",
         description: "Tenta evitar o ataque inimigo, com chance de não sofrer dano no próximo turno.",
-        hp: 450,
+        hp: 500,
         locked: true,
     },
     alma_negra_x: {
@@ -77,7 +77,7 @@ const characters = {
         image: "personagens/alma_negra-x.png",
         ability: "Ataque Brutal",
         description: "O pirata mais temido dos sete mares, com ataques brutais.",
-        hp: 500,
+        hp: 550,
         locked: true,
     },
     peterete_x: {
@@ -86,7 +86,7 @@ const characters = {
         image: "personagens/peterete-x.png",
         ability: "Plano Perigoso",
         description: "Um gangster perigoso com um plano para tudo.",
-        hp: 500,
+        hp: 600,
         locked: true,
     },
     racha_cuca_x: {
@@ -95,7 +95,7 @@ const characters = {
         image: "personagens/racha_cuca-x.png",
         ability: "Ataque de Racha Cuca",
         description: "Um cientista louco cujas invenções são imprevisíveis e perigosas.",
-        hp: 550,
+        hp: 650,
         locked: true,
     },
     professor_girafales: {
@@ -104,7 +104,7 @@ const characters = {
         image: "personagens/professor_girafales.png",
         ability: "Lecionar com Fúria",
         description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
-        hp: 600,
+        hp: 700,
         locked: true,
     },
     chapolin_colorado: {
@@ -113,7 +113,7 @@ const characters = {
         image: "personagens/chapolin_colorado.png",
         ability: "Marreta Biônica",
         description: "Um golpe com sua marreta que pode atordoar o inimigo, fazendo-o perder a vez.",
-        hp: 650,
+        hp: 750,
         locked: true,
     },
     chaves: {
@@ -122,7 +122,7 @@ const characters = {
         image: "personagens/chaves.png",
         ability: "Piripaque",
         description: "Um ataque de pânico que, de alguma forma, causa dano ao inimigo por pura confusão.",
-        hp: 700,
+        hp: 800,
         locked: true,
     },
 
@@ -223,7 +223,7 @@ const villains = [
     {
         name: "Girafales Colorado",
         image: "personagens/girafales_colorado.png",
-        hp: 600,
+        hp: 900,
         attackDamage: 40,
         description: "Uma versão do Professor Girafales que usa sua inteligência para o mal.",
     },

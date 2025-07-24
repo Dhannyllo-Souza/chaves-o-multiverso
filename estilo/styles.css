@@ -18,7 +18,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: url('flying_bus.png');
+    background-image: url('../cenarios/flying_bus.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

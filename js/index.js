@@ -36,21 +36,20 @@ const characters = {
         locked: false,
     },
     dr_chapatin: {
-        id: 'dr. Chapatin',
-        name: "Dr. Chapatin", // Changed name for consistency
+        id: 'dr_chapatin',
+        name: "Dr. Chapatin",
         image: "personagens/dr_chapatin.png",
         ability: "Injeção Dolorosa",
-        description: "Uma bruxa poderosa com feitiços malignos e uma gargalhada assustadora.", // Added missing comma
+        description: "Aplica uma injeção que causa dor e pode envenenar o inimigo.",
         hp: 350,
-         locked: true,
-
+        locked: true,
     },
     dona_clotide: {
         id: 'dona_clotide',
-        name: "Dona Clotilde", // Changed name for consistency
-        image: "personagens/dona-clotide.png",
+        name: "Dona Clotilde",
+        image: "personagens/dona_clotide.png",
         ability: "Ataque de Vassoura",
-        description: "Uma bruxa poderosa com feitiços malignos e uma gargalhada assustadora.", // Added missing comma
+        description: "Uma bruxa com sua vassoura, que ataca com golpes surpreendentes.",
         hp: 350,
         locked: true,
     },
@@ -72,28 +71,37 @@ const characters = {
         hp: 450,
         locked: true,
     },
-    Alma_Negra_X: { // Changed ID for consistency
+    alma_negra_x: {
         id: 'alma_negra_x',
         name: "Alma Negra X",
         image: "personagens/alma_negra-x.png",
         ability: "Ataque Brutal",
-        description: "O pirata mais temido dos sete mares, com ataques brutais.", // Added missing comma
+        description: "O pirata mais temido dos sete mares, com ataques brutais.",
         hp: 500,
         locked: true,
     },
-    Racha_Cuca_X: { // Changed ID for consistency
+    peterete_x: {
+        id: 'peterete_x',
+        name: "Peterete X",
+        image: "personagens/peterete-x.png",
+        ability: "Plano Perigoso",
+        description: "Um gangster perigoso com um plano para tudo.",
+        hp: 500,
+        locked: true,
+    },
+    racha_cuca_x: {
         id: 'racha_cuca_x',
         name: "Racha Cuca X",
         image: "personagens/racha_cuca-x.png",
         ability: "Ataque de Racha Cuca",
-        description: "Um cientista louco cujas invenções são imprevisíveis e perigosas.", // Added missing comma
+        description: "Um cientista louco cujas invenções são imprevisíveis e perigosas.",
         hp: 550,
         locked: true,
     },
-        professor_girafales: { // Added missing character definition
+    professor_girafales: {
         id: 'professor_girafales',
         name: "Professor Girafales",
-        image: "personagens/professor_girafales.png", // Assuming an image for him
+        image: "personagens/professor_girafales.png",
         ability: "Lecionar com Fúria",
         description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
         hp: 600,
@@ -172,7 +180,7 @@ const villains = [
     },
     {
         name: "Poucas Trancas",
-        image: "personagens/poucas_trancas.png", // Corrected path
+        image: "personagens/poucas_trancas.png",
         hp: 500,
         attackDamage: 40,
         description: "Um bandido forte e de poucas palavras. Seus punhos falam por ele."
@@ -195,30 +203,29 @@ const villains = [
         name: "Dr. Chapatin X",
         image: "personagens/dr_chapatin-x.png",
         hp: 650,
-        attackDamage: 35, // Ensures attackDamage for a villain
-        description: "Uma versão sombria do Dr. Chapatin, mais perigosa e com poções venenosas.", // More villain-appropriate description
+        attackDamage: 35,
+        description: "Uma versão sombria do Dr. Chapatin, mais perigosa e com poções venenosas.",
     },
     {
-        name: "Chapolin Colorado X", // Corrected name
+        name: "Chapolin Colorado X",
         image: "personagens/chapolin_colorado-x.png",
         hp: 700,
         attackDamage: 30,
-        description: "Uma versão distorcida do herói, usando sua marreta para o mal.", // More villain-appropriate description
+        description: "Uma versão distorcida do herói, usando sua marreta para o mal.",
     },
     {
         name: "Chaves X",
         image: "personagens/chaves-x.png",
         hp: 800,
         attackDamage: 30,
-        description: "A versão maligna do Chaves, com piripaques de pura destruição.", // More villain-appropriate description
- },
+        description: "A versão maligna do Chaves, com piripaques de pura destruição.",
+    },
     {
         name: "Girafales Colorado",
-        image: "girafales-colorado.png", // Assuming an image for him
-        ability: "Lecionar com Fúria",
+        image: "personagens/girafales_colorado.png",
         hp: 600,
         attackDamage: 40,
-        description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
+        description: "Uma versão do Professor Girafales que usa sua inteligência para o mal.",
     },
 ];
 
@@ -364,7 +371,7 @@ function playerAttack() {
                 logMessage += ' O inimigo está atordoado!';
             }
             break;
-        case 'dr_chapatin': // This case will never be hit directly if dr_chapatin is not a hero. Keeping it for now.
+        case 'dr_chapatin':
             damage = 5;
             villainPoisonTurns = 2;
             logMessage = `Dr. Chapatin aplicou uma Injeção Dolorosa, causando ${damage} de dano e envenenando o inimigo!`;
@@ -395,15 +402,19 @@ function playerAttack() {
                 logMessage = `Professor Girafales deu uma lição no inimigo, causando ${damage} de dano!`;
             }
             break;
-        case 'dona_clotide': // New case for Dona Clotilde hero
+        case 'dona_clotide':
             damage = 28;
             logMessage = `Dona Clotilde usou o Ataque de Vassoura e causou ${damage} de dano!`;
             break;
-        case 'alma_negra_x': // New case for Alma Negra X hero
+        case 'alma_negra_x':
             damage = 30;
             logMessage = `Alma Negra X usou o Ataque Brutal e causou ${damage} de dano!`;
             break;
-        case 'racha_cuca_x': // New case for Racha Cuca X hero
+        case 'peterete_x':
+            damage = 25; // Example damage for Peterete X hero
+            logMessage = `Peterete X usou o Plano Perigoso e causou ${damage} de dano!`;
+            break;
+        case 'racha_cuca_x':
             damage = 35;
             logMessage = `Racha Cuca X usou o Ataque de Racha Cuca e causou ${damage} de dano!`;
             break;
@@ -508,7 +519,6 @@ function endGame(isVictory) {
         saveProgress();
 
         let unlockedHero = null;
-        // Filter out any newly added characters from the initially unlocked list
         const initialUnlockedHeroes = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'];
         const heroesToUnlock = Object.values(characters).filter(c => c.locked && !unlockedHeroes.includes(c.id) && !initialUnlockedHeroes.includes(c.id));
         
@@ -605,7 +615,6 @@ function populateCharacterSelection() {
 
     for (const charId in characters) {
         const char = characters[charId];
-        // Check if character is initially unlocked OR if it's in the unlockedHeroes list
         const isInitiallyUnlocked = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'].includes(char.id);
         const isUnlocked = isInitiallyUnlocked || unlockedHeroes.includes(char.id);
         

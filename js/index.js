@@ -2,7 +2,7 @@ const characters = {
         chiquinha: {
         id: 'chiquinha',
         name: "Chiquinha",
-        image: "personagens/chiquinha.png",
+        image: "../personagens/chiquinha.png",
         ability: "Fúria do Cabelo",
         description: "Ataque rápido que tem chance de atingir duas vezes.",
         hp: 100,
@@ -11,7 +11,7 @@ const characters = {
     quico: {
         id: 'quico',
         name: "Quico",
-        image: "personagens/quico.png",
+        image: "../personagens/quico.png",
         ability: "Chute Quadrado",
         description: "Um chute poderoso que causa dano consistente ao inimigo.",
         hp: 150,
@@ -20,7 +20,7 @@ const characters = {
     dona_florinda: {
         id: 'dona_florinda',
         name: "Dona Florinda",
-        image: "personagens/dona_florinda.png",
+        image: "../personagens/dona_florinda.png",
         ability: "Grito Supersônico",
         description: "Um grito devastador que enfraquece o próximo ataque do inimigo.",
         hp: 200,
@@ -29,7 +29,7 @@ const characters = {
          sr_barriga: {
         id: 'sr_barriga',
         name: "Sr. Barriga",
-        image: "personagens/sr_barriga.png",
+        image: "../personagens/sr_barriga.png",
         ability: "Livro Místico",
         description: "Usa um feitiço aleatório do livro que pode causar dano massivo ou curá-lo.",
         hp: 250,
@@ -39,7 +39,7 @@ const characters = {
     dr_chapatin: {
         id: 'dr_chapatin',
         name: "Dr. Chapatin",
-        image: "personagens/dr_chapatin.png",
+        image: "../personagens/dr_chapatin.png",
         ability: "Injeção Dolorosa",
         description: "Causa dano contínuo (veneno) por 2 turnos.",
         hp: 310,
@@ -48,7 +48,7 @@ const characters = {
     chaparron_bonaparte: {
         id: 'chaparron_bonaparte',
         name: "Chaparrón Bonaparte",
-        image: "personagens/chaparron_bonaparte.png",
+        image: "../personagens/chaparron_bonaparte.png",
         ability: "Chirrion!",
         description: "Diz 'Chirrion!' tão repentinamente que causa dano de susto.",
         hp: 350,
@@ -57,7 +57,7 @@ const characters = {
     seu_madruga: {
         id: 'seu_madruga',
         name: "Seu Madruga",
-        image: "personagens/seu_madruga.png",
+        image: "../personagens/seu_madruga.png",
         ability: "Fuga do Aluguel",
         description: "Tenta evitar o ataque inimigo, com chance de não sofrer dano no próximo turno.",
         hp: 400,
@@ -66,7 +66,7 @@ const characters = {
      chapolin_colorado: {
         id: 'chapolin_colorado',
         name: "Chapolin Colorado",
-        image: "personagens/chapolin_colorado.png",
+        image: "../personagens/chapolin_colorado.png",
         ability: "Marreta Biônica",
         description: "Um golpe com sua marreta que pode atordoar o inimigo, fazendo-o perder a vez.",
         hp: 450,
@@ -75,7 +75,7 @@ const characters = {
     chaves: {
         id: 'chaves',
         name: "Chaves",
-        image: "personagens/chaves.png",
+        image: "../personagens/chaves.png",
         ability: "Piripaque",
         description: "Um ataque de pânico que, de alguma forma, causa dano ao inimigo por pura confusão.",
         hp: 600,
@@ -86,42 +86,42 @@ const characters = {
 const villains = [
     {
         name: "Super Sam",
-        image: "personagens/super_sam.png",
+        image: "../personagens/super_sam.png",
         hp: 150,
         attackDamage: 25,
         description: "Golpeia o inimigo com um saco de dinheiro. Eficaz e capitalista!",
     },
     {
         name: "Tripa Seca",
-        image: "personagens/tripa_seca.png",
+        image: "../personagens/tripa_seca.png",
         hp: 200,
         attackDamage: 20,
         description: "Um bandido impiedoso que ataca sem hesitar."
     },
     {
         name: "Quase Nada",
-        image: "personagens/quase_nada.png",
+        image: "../personagens/quase_nada.png",
         hp: 250,
         attackDamage: 22,
         description: "Tão pequeno que seus ataques são difíceis de prever."
     },
     {
         name: "Peterete",
-        image: "personagens/peterete.png",
+        image: "../personagens/peterete.png",
         hp: 300,
         attackDamage: 25,
         description: "Um gangster perigoso com um plano para tudo."
     },
     {
         name: "Racha Cuca",
-        image: "personagens/racha_cuca.png",
+        image: "../personagens/racha_cuca.png",
         hp: 350,
         attackDamage: 28,
         description: "Um cientista louco cujas invenções são imprevisíveis e perigosas."
     },
     {
         name: "Bruxa Baratuxa",
-        image: "personagens/bruxa_baratuxa.png",
+        image: "../personagens/bruxa_baratuxa.png",
         hp: 400,
         attackDamage: 32,
         description: "Uma bruxa poderosa com feitiços malignos e uma gargalhada assustadora."
@@ -129,28 +129,28 @@ const villains = [
    
     {
         name: "Pistoleiro Veloz",
-        image: "personagens/pistoleiro_veloz.png",
+        image: "../personagens/pistoleiro_veloz.png",
         hp: 450,
         attackDamage: 30,
         description: "O pistoleiro mais rápido do oeste... ou assim ele diz."
     },
     {
         name: "Poucas Trancas",
-        image: "personagenspoucas_trancas.png",
+        image: "../personagenspoucas_trancas.png",
         hp: 500,
         attackDamage: 40,
         description: "Um bandido forte e de poucas palavras. Seus punhos falam por ele."
     },
      {
         name: "Alma Negra",
-        image: "personagens/alma_negra.png",
+        image: "../personagens/alma_negra.png",
         hp: 550,
         attackDamage: 35,
         description: "O pirata mais temido dos sete mares, com ataques brutais."
     },
      {
         name: "Dom Caveira",
-        image: "personagens/dom_caveira.png",
+        image: "../personagens/dom_caveira.png",
         hp: 600,
         attackDamage: 30,
         description: "Invoca um espírito que causa dano e tem chance de amedrontar o inimigo.",
@@ -198,9 +198,9 @@ async function loadSound(url) {
 }
 
 // Pre-load sounds
-loadSound('sons/attack_sound.mp3').then(buffer => attackSoundBuffer = buffer);
-loadSound('sons/victory_sound.mp3').then(buffer => victorySoundBuffer = buffer);
-loadSound('sons/unlock_sound.mp3').then(buffer => unlockSoundBuffer = buffer);
+loadSound('../sons/attack_sound.mp3').then(buffer => attackSoundBuffer = buffer);
+loadSound('../sons/victory_sound.mp3').then(buffer => victorySoundBuffer = buffer);
+loadSound('../sons/unlock_sound.mp3').then(buffer => unlockSoundBuffer = buffer);
 
 
 const screens = {

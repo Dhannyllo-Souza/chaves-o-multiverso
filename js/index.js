@@ -47,7 +47,7 @@ const characters = {
     dona_clotide: {
         id: 'dona_clotide',
         name: "Dona Clotilde",
-        image: "personagens/dona_clotide.png",
+        image: "personagens/dona-clotide.png",
         ability: "Ataque de Vassoura",
         description: "Uma bruxa com sua vassoura, que ataca com golpes surpreendentes.",
         hp: 350,
@@ -122,7 +122,7 @@ const characters = {
         image: "personagens/chaves.png",
         ability: "Piripaque",
         description: "Um ataque de pânico que, de alguma forma, causa dano ao inimigo por pura confusão.",
-        hp: 700,
+        hp: 800,
         locked: true,
     },
 

@@ -35,14 +35,24 @@ const characters = {
         hp: 300,
         locked: false,
     },
+    dr_chapatin: {
+        id: 'dr. Chapatin',
+        name: "Dr. Chapatin", // Changed name for consistency
+        image: "personagens/dr_chapatin.png",
+        ability: "Injeção Dolorosa",
+        description: "Uma bruxa poderosa com feitiços malignos e uma gargalhada assustadora.", // Added missing comma
+        hp: 350,
+         locked: true,
+
+    },
     dona_clotide: {
         id: 'dona_clotide',
         name: "Dona Clotilde", // Changed name for consistency
-        image: "personagens/dona_clotide.png",
+        image: "personagens/dona-clotide.png",
         ability: "Ataque de Vassoura",
         description: "Uma bruxa poderosa com feitiços malignos e uma gargalhada assustadora.", // Added missing comma
         hp: 350,
-        locked: false,
+        locked: true,
     },
     chaparron_bonaparte: {
         id: 'chaparron_bonaparte',
@@ -80,13 +90,22 @@ const characters = {
         hp: 550,
         locked: true,
     },
+        professor_girafales: { // Added missing character definition
+        id: 'professor_girafales',
+        name: "Professor Girafales",
+        image: "personagens/professor_girafales.png", // Assuming an image for him
+        ability: "Lecionar com Fúria",
+        description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
+        hp: 600,
+        locked: true,
+    },
     chapolin_colorado: {
         id: 'chapolin_colorado',
         name: "Chapolin Colorado",
         image: "personagens/chapolin_colorado.png",
         ability: "Marreta Biônica",
         description: "Um golpe com sua marreta que pode atordoar o inimigo, fazendo-o perder a vez.",
-        hp: 600,
+        hp: 650,
         locked: true,
     },
     chaves: {
@@ -98,15 +117,7 @@ const characters = {
         hp: 700,
         locked: true,
     },
-    professor_girafales: { // Added missing character definition
-        id: 'professor_girafales',
-        name: "Professor Girafales",
-        image: "personagens/professor_girafales.png", // Assuming an image for him
-        ability: "Lecionar com Fúria",
-        description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
-        hp: 650,
-        locked: true,
-    }
+
 };
 
 const villains = [
@@ -200,6 +211,14 @@ const villains = [
         hp: 800,
         attackDamage: 30,
         description: "A versão maligna do Chaves, com piripaques de pura destruição.", // More villain-appropriate description
+ },
+    {
+        name: "Girafales Colorado",
+        image: "girafales-colorado.png", // Assuming an image for him
+        ability: "Lecionar com Fúria",
+        hp: 600,
+        attackDamage: 40,
+        description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
     },
 ];
 

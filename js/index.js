@@ -263,21 +263,21 @@ const villains = [
         description: "Uma versão do Professor Girafales que usa sua inteligência para o mal.",
     },
     {
-        name: "Super Pistoleiro Veloz Sam Racha Cuca",
+        name: "super_pistoleiro_veloz_sam_racha_cuca",
         image: "personagens/super_pistoleiro_veloz_sam_racha_cuca.png",
         hp: 900,
         attackDamage: 45,
         description: "Uma combinação de Super Sam, Pistoleiro Veloz e Racha Cuca, com ataques rápidos e imprevisíveis.",
     },
     {
-        name: "Dr. Chapatin Poucas Trancas",
+        name: "dr_chapatin_poucas_trancas",
         image: "personagens/dr_chapatin_poucas_trancas.png",
         hp: 800,
         attackDamage: 35,
         description: "Uma versão combinada do Dr. Chapatin e Poucas Trancas, com ataques brutais e poções venenosas.",
     },
     {
-        name: "Alma Dom Tripa Seca Caveira Negra",
+        name: "alma_dom_tripa_seca_caveira_negra",
         image: "personagens/alma_dom_tripa_seca_caveira_negra.png",
         hp: 1000,   
         attackDamage: 40,
@@ -419,7 +419,7 @@ function playerAttack() {
             logMessage = `Dona Florinda usou o Grito Supersônico, causando ${damage} de dano e enfraquecendo o próximo ataque do inimigo!`;
             break;
         case 'chapolin_colorado':
-            damage = 50;
+            damage = 20;
             logMessage = `Chapolin usou a Marreta Biônica e causou ${damage} de dano!`;
             if (Math.random() < 0.4) { // 40% chance to stun
                 isVillainStunned = true;
@@ -432,7 +432,7 @@ function playerAttack() {
             logMessage = `Dr. Chapatin aplicou uma Injeção Dolorosa, causando ${damage} de dano e envenenando o inimigo!`;
             break;
         case 'chaves':
-            damage = 60;
+            damage = 40;
             logMessage = `Chaves usou o Piripaque e causou ${damage} de dano!`;
             break;
         case 'pancada_bonaparte': // Corrected ID

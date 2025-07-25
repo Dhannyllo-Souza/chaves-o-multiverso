@@ -426,7 +426,7 @@ function playerAttack() {
             logMessage = `Dr. Chapatin aplicou uma Injeção Dolorosa, causando ${damage} de dano e envenenando o inimigo!`;
             break;
         case 'chaves':
-            damage = 60;
+            damage = 50;
             logMessage = `Chaves usou o Piripaque e causou ${damage} de dano!`;
             break;
         case 'pancada_bonaparte': 
@@ -456,7 +456,7 @@ function playerAttack() {
             logMessage = `Dona Clotilde usou o Ataque de Vassoura e causou ${damage} de dano!`;
             break;
         case 'nhonho': 
-            damage = 60; 
+            damage = 40; 
             logMessage = `Nhonho usou o Ataque de Peso e esmagou o inimigo, causando ${damage} de dano!`;
             break;
         case 'paty': 

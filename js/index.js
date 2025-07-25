@@ -283,7 +283,7 @@ const villains = [
         name: "Alma Negra Versão Aprimorada",
         image: "personagens/alma_negra_versao_aprimorada.png",
         hp: 700,
-        attackDamage: 45, // Adjusted damage for 'aprimorada' version
+        attackDamage: 35, // Adjusted damage for 'aprimorada' version
         description: "O pirata mais temido dos sete mares, com ataques brutais.",
     },
     {
@@ -368,7 +368,7 @@ const villains = [
         name: "Alma Dom Tripa Seca Caveira Negra",
         image: "personagens/alma_dom_tripa_seca_caveira_negra.png",
         hp: 1300,
-        attackDamage: 40,
+        attackDamage: 35,
         description: "Uma fusão de Alma Negra, Dom Caveira e Tripa Seca, com ataques combinados e habilidades únicas.",
     },
 ];

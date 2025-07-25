@@ -270,14 +270,14 @@ const villains = [
         description: "Uma combinação de Super Sam, Pistoleiro Veloz e Racha Cuca, com ataques rápidos e imprevisíveis.",
     },
     {
-        name: "dr_chapatin_poucas_trancas",
+        name: "Dr. Chapatin Poucas Trancas",
         image: "personagens/dr_chapatin_poucas_trancas.png",
         hp: 800,
         attackDamage: 35,
         description: "Uma versão combinada do Dr. Chapatin e Poucas Trancas, com ataques brutais e poções venenosas.",
     },
     {
-        name: "alma_dom_tripa_seca_caveira_negra",
+        name: "Alma Dom Tripa Seca Caveira Negra",
         image: "personagens/alma_dom_tripa_seca_caveira_negra.png",
         hp: 1000,   
         attackDamage: 40,

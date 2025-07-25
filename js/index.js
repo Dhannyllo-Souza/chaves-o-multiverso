@@ -59,8 +59,8 @@ const characters = {
         baseDamage: 28,
         locked: true,
     },
-    pancada_bonaparte: { 
-        id: 'pancada_bonaparte', 
+    pancada_bonaparte: {
+        id: 'pancada_bonaparte',
         name: "Pancada Bonaparte",
         image: "personagens/pancada_bonaparte.png",
         ability: "Chirrion!",
@@ -79,7 +79,7 @@ const characters = {
         baseDamage: 25,
         locked: true,
     },
-    nhonho: { 
+    nhonho: {
         id: 'nhonho',
         name: "Nhonho",
         image: "personagens/nhonho.png",
@@ -88,8 +88,8 @@ const characters = {
         hp: 550,
         baseDamage: 40,
         locked: true,
-    }, 
-    paty: { 
+    },
+    paty: {
         id: 'paty',
         name: "Paty",
         image: "personagens/paty.png",
@@ -99,7 +99,7 @@ const characters = {
         baseDamage: 25,
         locked: true,
     },
-    popis: { 
+    popis: {
         id: 'popis',
         name: "Popis",
         image: "personagens/popis.png",
@@ -109,12 +109,12 @@ const characters = {
         baseDamage: 10,
         locked: true,
     },
-    dona_neves: { 
+    dona_neves: {
         id: 'dona_neves',
         name: "Dona Neves",
         image: "personagens/dona_neves.png",
         ability: "Nevasca Congelante",
-        description: "Causa dano e tem chance de congelar o inimigo, impedindo-o de atacar.",   
+        description: "Causa dano e tem chance de congelar o inimigo, impedindo-o de atacar.",
         hp: 700,
         baseDamage: 30,
         locked: true,
@@ -139,13 +139,63 @@ const characters = {
         baseDamage: 50,
         locked: true,
     },
+    gloria: {
+        id: 'gloria',
+        name: "Glória",
+        image: "personagens/gloria.png",
+        ability: "Ataque de Grito",
+        description: "Um grito poderoso que causa dano e pode atordoar o inimigo.",
+        hp: 850,
+        baseDamage: 30,
+        locked: true,
+    },
+    godinez: {
+        id: 'godinez',
+        name: "Godinez",
+        image: "personagens/godinez.png",
+        ability: "Ataque de Preguiça",
+        description: "Um ataque lento, mas com chance de causar dano massivo se o inimigo for pego desprevenido.", // Corrected description
+        hp: 900,
+        baseDamage: 60,
+        locked: true,
+    },
+    jaiminho: {
+        id: 'jaiminho',
+        name: "Jaiminho",
+        image: "personagens/jaiminho.png",
+        ability: "Entrega Relâmpago",
+        description: "Um ataque rápido que causa dano e pode confundir o inimigo.",
+        hp: 950,
+        baseDamage: 35,
+        locked: true,
+    },
+    lucas_pirado: {
+        id: 'lucas_pirado',
+        name: "Lucas Pirado",
+        image: "personagens/lucas_pirado.png",
+        ability: "Ataque de Loucura",
+        description: "Um ataque imprevisível que pode causar dano alto ou baixo.",
+        hp: 1000,
+        baseDamage: 45,
+        locked: true,
+    },
+    seu_madroga: {
+        id: 'seu_madroga',
+        name: "Seu Madroga",
+        image: "personagens/seu_madroga.png",
+        ability: "Ataque de Aluguel",
+        description: "Um ataque que causa dano e pode reduzir o dano do próximo ataque do inimigo.",
+        hp: 1050,
+        baseDamage: 40,
+        locked: true,
+    },
     chaves: {
         id: 'chaves',
         name: "Chaves",
         image: "personagens/chaves.png",
         ability: "Piripaque",
         description: "Um ataque de pânico que, de alguma forma, causa dano ao inimigo por pura confusão.",
-        hp: 900,
+        hp: 1200,
         baseDamage: 50,
         locked: true,
     },
@@ -222,73 +272,102 @@ const villains = [
         attackDamage: 30,
         description: "Invoca um espírito que causa dano e tem chance de amedrontar o inimigo.",
     },
-    {   
+    {
         name: "Dr. Chapatin Versão Negativo",
         image: "personagens/dr_chapatin_versao_negativo.png",
         hp: 650,
         attackDamage: 35,
         description: "Uma versão sombria do Dr. Chapatin, mais perigosa e com poções venenosas.",
-  },
-    {  
+    },
+    {
         name: "Alma Negra Versão Aprimorada",
         image: "personagens/alma_negra_versao_aprimorada.png",
         hp: 700,
-        attackDamage: 30, 
+        attackDamage: 45, // Adjusted damage for 'aprimorada' version
         description: "O pirata mais temido dos sete mares, com ataques brutais.",
-      },
-    {  
+    },
+    {
         name: "Peterete Versão Aprimorada",
         image: "personagens/peterete_versao_aprimorada.png",
         hp: 750,
-        attackDamage: 35, 
+        attackDamage: 35,
         description: "Um gangster perigoso com um plano para tudo.",
-  },
-    {  
+    },
+    {
         name: "Racha Cuca Versão Aprimorada",
         image: "personagens/racha_cuca_versao_aprimorada.png",
         hp: 800,
         attackDamage: 40,
-         description: "Um cientista louco cujas invenções são imprevisíveis e perigosas.",
+        description: "Um cientista louco cujas invenções são imprevisíveis e perigosas.",
     },
-    { 
+    {
+        name: "Mata Fácil",
+        image: "personagens/mata_facil.png",
+        hp: 850,
+        attackDamage: 30,
+        description: "Um caçador implacável que não hesita em eliminar qualquer um que cruze seu caminho.",
+    },
+    {
+        name: "Panca Louca",
+        image: "personagens/panca_louca.png",
+        hp: 900,
+        attackDamage: 35,
+        description: "Um lutador imprevisível que ataca com força bruta e movimentos erráticos.",
+    },
+    {
+        name: "Pouco Pelo",
+        image: "personagens/pouco_pelo.png",
+        hp: 950,
+        attackDamage: 30,
+        description: "Um vilão astuto que usa sua inteligência para enganar e atacar seus oponentes.",
+    },
+    {
+        name: "Rasga Bucho",
+        image: "personagens/rasga_bucho.png",
+        hp: 1000,
+        attackDamage: 40,
+        description: "Um brutamontes que ataca com força descomunal, deixando seus inimigos sem fôlego.",
+
+    },
+    {
         name: "Chapolin Colorado Versão Negativo",
         image: "personagens/chapolin_colorado_versao_negativo.png",
-        hp: 850,
+        hp: 1050,
         attackDamage: 30,
         description: "Uma versão distorcida do herói, usando sua marreta para o mal.",
     },
     {
         name: "Chaves Versão Negativo",
         image: "personagens/chaves_versao_negativo.png",
-        hp: 900,
+        hp: 1100,
         attackDamage: 30,
         description: "A versão maligna do Chaves, com piripaques de pura destruição.",
     },
     {
         name: "Girafales Colorado",
         image: "personagens/girafales_colorado.png",
-        hp: 950,
+        hp: 1150,
         attackDamage: 30,
         description: "Uma versão do Professor Girafales que usa sua inteligência para o mal.",
     },
     {
         name: "Super Pistoleiro Veloz Sam Racha Cuca",
         image: "personagens/super_pistoleiro_veloz_sam_racha_cuca.png",
-        hp: 1000,
+        hp: 1200,
         attackDamage: 45,
         description: "Uma combinação de Super Sam, Pistoleiro Veloz e Racha Cuca, com ataques rápidos e imprevisíveis.",
     },
     {
         name: "Dr. Chapatin Poucas Trancas",
         image: "personagens/dr_chapatin_poucas_trancas.png",
-        hp: 1050,
+        hp: 1250,
         attackDamage: 35,
         description: "Uma versão combinada do Dr. Chapatin e Poucas Trancas, com ataques brutais e poções venenosas.",
     },
     {
         name: "Alma Dom Tripa Seca Caveira Negra",
         image: "personagens/alma_dom_tripa_seca_caveira_negra.png",
-        hp: 1100,   
+        hp: 1300,
         attackDamage: 40,
         description: "Uma fusão de Alma Negra, Dom Caveira e Tripa Seca, com ataques combinados e habilidades únicas.",
     },
@@ -308,7 +387,7 @@ let villainConfused = 0; // Duration for confusion
 let unlockedHeroes = [];
 let currentVillainIndex = 0;
 
-const initialUnlockedCharacterIds = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'];
+const initialUnlockedCharacterIds = ['chiquinha', 'quico']; // Changed initial unlocked characters to only Chiquinha and Quico, as Dona Florinda and Sr. Barriga are marked as locked in 'characters' object. If you want them unlocked from start, set their 'locked' property to false.
 
 // Audio context for sound effects
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -367,7 +446,7 @@ function updateBattleLog(message) {
     const p = document.createElement('p');
     p.textContent = message;
     log.prepend(p); // Add to the top
-    
+
     // Keep only the last 5 messages for readability
     while (log.children.length > 5) {
         log.removeChild(log.lastChild);
@@ -484,20 +563,20 @@ function playerAttack() {
                 logMessage += ' O inimigo está confuso!';
             }
             break;
-        case 'paty': 
+        case 'paty':
             logMessage = `Paty usou o Ataque de Patada e causou ${damage} de dano!`;
-            if (Math.random() < 0.3) { 
+            if (Math.random() < 0.3) {
                 isVillainStunned = 1; // Stun for 1 turn
                 logMessage += ' O inimigo está atordoado!';
             }
             break;
-        case 'popis': 
+        case 'popis':
             villainPoisonTurns = 3; // Poison for 3 turns
             logMessage = `Popis atirou pipocas explosivas, causando ${damage} de dano e envenenando o inimigo!`;
             break;
-        case 'dona_neves': 
+        case 'dona_neves':
             logMessage = `Dona Neves usou Nevasca Congelante, causando ${damage} de dano!`;
-            if (Math.random() < 0.35) { 
+            if (Math.random() < 0.35) {
                 isVillainStunned = 1; // Stun for 1 turn
                 logMessage += ' O inimigo está congelado!';
             }
@@ -549,14 +628,14 @@ function villainAttack() {
         document.getElementById('attack-button').disabled = false;
         return;
     }
-    
+
     let damage = villain.attackDamage;
     if (isVillainWeakened > 0) {
         damage = Math.floor(damage * 0.5); // 50% less damage
         logMessage += `${villain.name}'s attack is weakened! `;
     }
     if (villainConfused > 0) {
-        damage = Math.floor(damage * (0.5 + Math.random() * 0.5)); // 50% to 100% of normal damage
+        damage = Math.floor(damage * 0.7); // 30% less damage for confusion
         logMessage += `${villain.name} está confuso e seu ataque é menos eficaz! `;
     }
 
@@ -592,7 +671,7 @@ function endGame(isVictory) {
 
     if (isVictory) {
         playSound(victorySoundBuffer);
-        
+
         let unlockedHero = null;
         // Check if there's a next villain
         if (currentVillainIndex < villains.length - 1) {
@@ -600,24 +679,15 @@ function endGame(isVictory) {
             saveProgress();
 
             // Unlock the next character in a predefined order if not already unlocked
-            const allCharacterIds = Object.keys(characters);
-            const charactersAvailableToUnlock = allCharacterIds.filter(id => 
-                !initialUnlockedCharacterIds.includes(id) && 
-                !unlockedHeroes.includes(id)
+            const nextCharacterToUnlockId = Object.keys(characters).find(charId =>
+                characters[charId].locked && !unlockedHeroes.includes(charId)
             );
 
-            if (charactersAvailableToUnlock.length > 0) {
-                // Find the first character in the original 'characters' object order that is locked and not yet unlocked
-                const nextCharacterToUnlockId = Object.keys(characters).find(charId => 
-                    characters[charId].locked && !unlockedHeroes.includes(charId)
-                );
-
-                if (nextCharacterToUnlockId) {
-                    unlockedHero = characters[nextCharacterToUnlockId];
-                    unlockedHeroes.push(unlockedHero.id);
-                    characters[unlockedHero.id].locked = false;
-                    saveProgress();
-                }
+            if (nextCharacterToUnlockId) {
+                unlockedHero = characters[nextCharacterToUnlockId];
+                unlockedHeroes.push(unlockedHero.id);
+                characters[unlockedHero.id].locked = false;
+                saveProgress();
             }
             title.innerText = "Vitória!";
             message.innerText = `Você derrotou ${villain.name}! Mas um novo desafio aguarda...`;
@@ -655,7 +725,7 @@ function resetGame() {
     localStorage.removeItem('game_villain_index');
     currentVillainIndex = 0;
     unlockedHeroes = [...initialUnlockedCharacterIds]; // Start with initial heroes unlocked
-    
+
     // Reset all characters to locked except the initial ones
     for (const charId in characters) {
         if (!initialUnlockedCharacterIds.includes(charId)) {
@@ -717,7 +787,7 @@ function populateCharacterSelection() {
     for (const charId in characters) {
         const char = characters[charId];
         const isUnlocked = unlockedHeroes.includes(char.id);
-        
+
         const card = document.createElement('div');
         card.className = 'character-card';
         if (!isUnlocked) {
@@ -758,7 +828,7 @@ function populateCharacterSelection() {
 function loadProgress() {
     const savedHeroes = localStorage.getItem('game_unlocked_heroes');
     const savedVillainIndex = localStorage.getItem('game_villain_index');
-    
+
     // Always start with initial heroes unlocked by default
     unlockedHeroes = [...initialUnlockedCharacterIds];
 
@@ -772,6 +842,14 @@ function loadProgress() {
             }
         });
     }
+
+    // Ensure all characters *not* in unlockedHeroes are marked as locked in the `characters` object
+    for (const charId in characters) {
+        if (!unlockedHeroes.includes(charId)) {
+            characters[charId].locked = true;
+        }
+    }
+
 
     if (savedVillainIndex) {
         currentVillainIndex = parseInt(savedVillainIndex, 10);
@@ -795,6 +873,7 @@ function init() {
         if (currentVillainIndex >= villains.length) {
             resetGame(); // Full reset if all villains were defeated
         }
+        loadProgress(); // Reload progress to ensure character locked status is correct
         populateCharacterSelection();
         switchScreen('characterSelection');
         const currentSelected = document.querySelector('.character-card.selected');
@@ -802,7 +881,7 @@ function init() {
             currentSelected.classList.remove('selected');
         }
         document.getElementById('select-character-button').disabled = true;
-        selectedCharacterId = null;
+        selectedCharacterId = null; // Reset selected character
     });
 
     switchScreen('start');

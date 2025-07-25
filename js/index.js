@@ -53,10 +53,10 @@ const characters = {
         hp: 400,
         locked: true,
     },
-    chaparron_bonaparte: {
-        id: 'chaparron_bonaparte',
-        name: "Chaparrón Bonaparte",
-        image: "personagens/chaparron_bonaparte.png",
+    pancada_bonaparte: { // Corrected key to lowercase 'p'
+        id: 'pancada_bonaparte', // Corrected id to lowercase 'p'
+        name: "Pancada Bonaparte",
+        image: "personagens/pancada_bonaparte.png",
         ability: "Chirrion!",
         description: "Diz 'Chirrion!' tão repentinamente que causa dano de susto.",
         hp: 450,
@@ -69,6 +69,42 @@ const characters = {
         ability: "Fuga do Aluguel",
         description: "Tenta evitar o ataque inimigo, com chance de não sofrer dano no próximo turno.",
         hp: 500,
+        locked: true,
+    },
+    nhonho: { // Corrected syntax: added colon
+        id: 'nhonho',
+        name: "Nhonho",
+        image: "personagens/nhonho.png",
+        ability: "Ataque de Peso",
+        description: "Usa seu peso para esmagar o inimigo, causando dano alto.",
+        hp: 550,
+        locked: true,
+    }, // Added missing comma
+    paty: { // Corrected syntax: added colon
+        id: 'paty',
+        name: "Paty",
+        image: "personagens/paty.png",
+        ability: "Ataque de Patada",
+        description: "Uma patada rápida que causa dano e pode atordoar o inimigo.",
+        hp: 500,
+        locked: true,
+    },
+    popis: { // Corrected syntax: added colon
+        id: 'popis',
+        name: "Popis",
+        image: "personagens/popis.png",
+        ability: "Ataque de Pipoquinha",
+        description: "Ataca com pipocas explosivas que causam dano ao longo do tempo.",
+        hp: 600,
+        locked: true,
+    },
+    dona_neves: { // Corrected syntax: added colon
+        id: 'dona_neves',
+        name: "Dona Neves",
+        image: "personagens/dona_neves.png",
+        ability: "Nevasca Congelante",
+        description: "Causa dano e tem chance de congelar o inimigo, impedindo-o de atacar.",   
+        hp: 650,
         locked: true,
     },
     alma_negra_x: {
@@ -125,7 +161,6 @@ const characters = {
         hp: 800,
         locked: true,
     },
-
 };
 
 const villains = [
@@ -227,6 +262,27 @@ const villains = [
         attackDamage: 30,
         description: "Uma versão do Professor Girafales que usa sua inteligência para o mal.",
     },
+    {
+        name: "super_pistoleiro_veloz_sam_racha_cuca",
+        image: "personagens/super_pistoleiro_veloz_sam_racha_cuca.png",
+        hp: 900,
+        attackDamage: 45,
+        description: "Uma combinação de Super Sam, Pistoleiro Veloz e Racha Cuca, com ataques rápidos e imprevisíveis.",
+    },
+    {
+        name: "dr_chapatin_poucas_trancas",
+        image: "personagens/dr_chapatin_poucas_trancas.png",
+        hp: 800,
+        attackDamage: 35,
+        description: "Uma versão combinada do Dr. Chapatin e Poucas Trancas, com ataques brutais e poções venenosas.",
+    },
+    {
+        name: "alma_dom_tripa_seca_caveira_negra",
+        image: "personagens/alma_dom_tripa_seca_caveira_negra.png",
+        hp: 1000,   
+        attackDamage: 40,
+        description: "Uma fusão de Alma Negra, Dom Caveira e Tripa Seca, com ataques combinados e habilidades únicas.",
+    },
 ];
 
 let selectedCharacterId = null;
@@ -273,7 +329,6 @@ async function loadSound(url) {
 loadSound('sons/attack_sound.mp3').then(buffer => attackSoundBuffer = buffer);
 loadSound('sons/victory_sound.mp3').then(buffer => victorySoundBuffer = buffer);
 loadSound('sons/unlock_sound.mp3').then(buffer => unlockSoundBuffer = buffer);
-
 
 const screens = {
     start: document.getElementById('start-screen'),
@@ -380,9 +435,9 @@ function playerAttack() {
             damage = 40;
             logMessage = `Chaves usou o Piripaque e causou ${damage} de dano!`;
             break;
-        case 'chaparron_bonaparte':
+        case 'pancada_bonaparte': // Corrected ID
             damage = 20;
-            logMessage = `Chaparrón Bonaparte usou o Chirrion! e causou ${damage} de dano!`;
+            logMessage = `Pancada Bonaparte usou o Chirrion! e causou ${damage} de dano!`;
             break;
         case 'seu_madruga':
             damage = 25;
@@ -406,12 +461,37 @@ function playerAttack() {
             damage = 28;
             logMessage = `Dona Clotilde usou o Ataque de Vassoura e causou ${damage} de dano!`;
             break;
+        case 'nhonho': // Added case for Nhonho
+            damage = 60; 
+            logMessage = `Nhonho usou o Ataque de Peso e esmagou o inimigo, causando ${damage} de dano!`;
+            break;
+        case 'paty': // Added case for Paty
+            damage = 25;
+            logMessage = `Paty usou o Ataque de Patada e causou ${damage} de dano!`;
+            if (Math.random() < 0.3) { 
+                isVillainStunned = true;
+                logMessage += ' O inimigo está atordoado!';
+            }
+            break;
+        case 'popis': // Added case for Popis (applying DOT like poison to villain)
+            damage = 10; 
+            villainPoisonTurns = 3; 
+            logMessage = `Popis atirou pipocas explosivas, causando ${damage} de dano e envenenando o inimigo!`;
+            break;
+        case 'dona_neves': // Added case for Dona Neves
+            damage = 30;
+            logMessage = `Dona Neves usou Nevasca Congelante, causando ${damage} de dano!`;
+            if (Math.random() < 0.35) { 
+                isVillainStunned = true;
+                logMessage += ' O inimigo está congelado!';
+            }
+            break;
         case 'alma_negra_x':
             damage = 30;
             logMessage = `Alma Negra X usou o Ataque Brutal e causou ${damage} de dano!`;
             break;
         case 'peterete_x':
-            damage = 25; // Example damage for Peterete X hero
+            damage = 25; 
             logMessage = `Peterete X usou o Plano Perigoso e causou ${damage} de dano!`;
             break;
         case 'racha_cuca_x':
@@ -494,7 +574,6 @@ function villainAttack() {
     }
 }
 
-
 function checkGameOver() {
     if (hero.hp <= 0) {
         endGame(false);
@@ -520,10 +599,11 @@ function endGame(isVictory) {
 
         let unlockedHero = null;
         const initialUnlockedHeroes = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'];
+        // Filter for characters that are locked, not yet unlocked, and not part of the initial set
         const heroesToUnlock = Object.values(characters).filter(c => c.locked && !unlockedHeroes.includes(c.id) && !initialUnlockedHeroes.includes(c.id));
         
         if (heroesToUnlock.length > 0) {
-            unlockedHero = heroesToUnlock[0];
+            unlockedHero = heroesToUnlock[0]; // Unlock the first available locked hero
             unlockedHeroes.push(unlockedHero.id);
             characters[unlockedHero.id].locked = false;
             saveProgress();
@@ -585,7 +665,6 @@ function setupBattle() {
     villainPoisonTurns = 0;
     heroEvadeNextAttack = false;
     villainConfused = false;
-
 
     const heroSide = document.getElementById('hero-side');
     heroSide.innerHTML = `

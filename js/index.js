@@ -419,7 +419,7 @@ function playerAttack() {
             logMessage = `Dona Florinda usou o Grito Supersônico, causando ${damage} de dano e enfraquecendo o próximo ataque do inimigo!`;
             break;
         case 'chapolin_colorado':
-            damage = 55;
+            damage = 50;
             logMessage = `Chapolin usou a Marreta Biônica e causou ${damage} de dano!`;
             if (Math.random() < 0.4) { // 40% chance to stun
                 isVillainStunned = true;
@@ -432,7 +432,7 @@ function playerAttack() {
             logMessage = `Dr. Chapatin aplicou uma Injeção Dolorosa, causando ${damage} de dano e envenenando o inimigo!`;
             break;
         case 'chaves':
-            damage = 70;
+            damage = 60;
             logMessage = `Chaves usou o Piripaque e causou ${damage} de dano!`;
             break;
         case 'pancada_bonaparte': // Corrected ID

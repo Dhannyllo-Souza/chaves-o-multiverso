@@ -6,6 +6,7 @@ const characters = {
         ability: "Fúria do Cabelo",
         description: "Ataque rápido que tem chance de atingir duas vezes.",
         hp: 150,
+        baseDamage: 15,
         locked: false,
     },
     quico: {
@@ -15,6 +16,7 @@ const characters = {
         ability: "Chute Quadrado",
         description: "Um chute poderoso que causa dano consistente ao inimigo.",
         hp: 200,
+        baseDamage: 25,
         locked: false,
     },
     dona_florinda: {
@@ -24,6 +26,7 @@ const characters = {
         ability: "Grito Supersônico",
         description: "Um grito devastador que enfraquece o próximo ataque do inimigo.",
         hp: 250,
+        baseDamage: 10,
         locked: true,
     },
     sr_barriga: {
@@ -33,6 +36,7 @@ const characters = {
         ability: "Livro Místico",
         description: "Usa um feitiço aleatório do livro que pode causar dano massivo ou curá-lo.",
         hp: 300,
+        baseDamage: 0, // Damage is variable
         locked: true,
     },
     dr_chapatin: {
@@ -42,6 +46,7 @@ const characters = {
         ability: "Injeção Dolorosa",
         description: "Aplica uma injeção que causa dor e pode envenenar o inimigo.",
         hp: 350,
+        baseDamage: 20,
         locked: true,
     },
     dona_clotide: {
@@ -51,6 +56,7 @@ const characters = {
         ability: "Ataque de Vassoura",
         description: "Uma bruxa com sua vassoura, que ataca com golpes surpreendentes.",
         hp: 400,
+        baseDamage: 28,
         locked: true,
     },
     pancada_bonaparte: { 
@@ -60,6 +66,7 @@ const characters = {
         ability: "Chirrion!",
         description: "Diz 'Chirrion!' tão repentinamente que causa dano de susto.",
         hp: 450,
+        baseDamage: 20,
         locked: true,
     },
     seu_madruga: {
@@ -69,6 +76,7 @@ const characters = {
         ability: "Fuga do Aluguel",
         description: "Tenta evitar o ataque inimigo, com chance de não sofrer dano no próximo turno.",
         hp: 500,
+        baseDamage: 25,
         locked: true,
     },
     nhonho: { 
@@ -78,6 +86,7 @@ const characters = {
         ability: "Ataque de Peso",
         description: "Usa seu peso para esmagar o inimigo, causando dano alto.",
         hp: 550,
+        baseDamage: 40,
         locked: true,
     }, 
     paty: { 
@@ -87,6 +96,7 @@ const characters = {
         ability: "Ataque de Patada",
         description: "Uma patada rápida que causa dano e pode atordoar o inimigo.",
         hp: 600,
+        baseDamage: 25,
         locked: true,
     },
     popis: { 
@@ -96,6 +106,7 @@ const characters = {
         ability: "Ataque de Pipoquinha",
         description: "Ataca com pipocas explosivas que causam dano ao longo do tempo.",
         hp: 650,
+        baseDamage: 10,
         locked: true,
     },
     dona_neves: { 
@@ -105,6 +116,7 @@ const characters = {
         ability: "Nevasca Congelante",
         description: "Causa dano e tem chance de congelar o inimigo, impedindo-o de atacar.",   
         hp: 700,
+        baseDamage: 30,
         locked: true,
     },
     professor_girafales: {
@@ -114,6 +126,7 @@ const characters = {
         ability: "Lecionar com Fúria",
         description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
         hp: 750,
+        baseDamage: 29,
         locked: true,
     },
     chapolin_colorado: {
@@ -123,6 +136,7 @@ const characters = {
         ability: "Marreta Biônica",
         description: "Um golpe com sua marreta que pode atordoar o inimigo, fazendo-o perder a vez.",
         hp: 800,
+        baseDamage: 50,
         locked: true,
     },
     chaves: {
@@ -132,6 +146,7 @@ const characters = {
         ability: "Piripaque",
         description: "Um ataque de pânico que, de alguma forma, causa dano ao inimigo por pura confusão.",
         hp: 900,
+        baseDamage: 50,
         locked: true,
     },
 };
@@ -209,42 +224,42 @@ const villains = [
     },
     {   
         name: "Dr. Chapatin Versão Negativo",
-        image: "personagens/dr_chapatin_vresão_negativo.png",
+        image: "personagens/dr_chapatin_versao_negativo.png",
         hp: 650,
         attackDamage: 35,
         description: "Uma versão sombria do Dr. Chapatin, mais perigosa e com poções venenosas.",
   },
     {  
-        name: "Alma Negra  Versão Aprimorada",
-        image: "personagens/alma_negra_versão_aprimorada.png",
+        name: "Alma Negra Versão Aprimorada",
+        image: "personagens/alma_negra_versao_aprimorada.png",
         hp: 700,
         attackDamage: 30, 
         description: "O pirata mais temido dos sete mares, com ataques brutais.",
       },
     {  
         name: "Peterete Versão Aprimorada",
-        image: "personagens/peterete_versão_aprimorada.png",
+        image: "personagens/peterete_versao_aprimorada.png",
         hp: 750,
         attackDamage: 35, 
         description: "Um gangster perigoso com um plano para tudo.",
   },
     {  
         name: "Racha Cuca Versão Aprimorada",
-        image: "personagens/racha_cuca_versão_aprimorada.png",
+        image: "personagens/racha_cuca_versao_aprimorada.png",
         hp: 800,
         attackDamage: 40,
          description: "Um cientista louco cujas invenções são imprevisíveis e perigosas.",
     },
     { 
         name: "Chapolin Colorado Versão Negativo",
-        image: "personagens/chapolin_colorado_vresão_negativo.png",
+        image: "personagens/chapolin_colorado_versao_negativo.png",
         hp: 850,
         attackDamage: 30,
         description: "Uma versão distorcida do herói, usando sua marreta para o mal.",
     },
     {
         name: "Chaves Versão Negativo",
-        image: "personagens/chaves_vresão_negativo.png",
+        image: "personagens/chaves_versao_negativo.png",
         hp: 900,
         attackDamage: 30,
         description: "A versão maligna do Chaves, com piripaques de pura destruição.",
@@ -283,21 +298,26 @@ let selectedCharacterId = null;
 let hero = {};
 let villain = {};
 let isPlayerTurn = true;
-let isVillainWeakened = false;
-let isVillainStunned = false;
+let isVillainWeakened = 0; // Duration for weakness
+let isVillainStunned = 0; // Duration for stun
 let heroPoisonTurns = 0;
 let villainPoisonTurns = 0;
 let heroEvadeNextAttack = false;
-let villainConfused = false;
+let villainConfused = 0; // Duration for confusion
 
 let unlockedHeroes = [];
 let currentVillainIndex = 0;
+
+const initialUnlockedCharacterIds = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'];
 
 // Audio context for sound effects
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
 function playSound(buffer) {
-    if (!buffer) return;
+    if (!buffer) {
+        console.warn("Audio buffer not loaded, cannot play sound.");
+        return;
+    }
     const source = audioContext.createBufferSource();
     source.buffer = buffer;
     source.connect(audioContext.destination);
@@ -311,6 +331,9 @@ let unlockSoundBuffer;
 async function loadSound(url) {
     try {
         const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const arrayBuffer = await response.arrayBuffer();
         return await audioContext.decodeAudioData(arrayBuffer);
     } catch (e) {
@@ -320,9 +343,12 @@ async function loadSound(url) {
 }
 
 // Pre-load sounds
-loadSound('sons/attack_sound.mp3').then(buffer => attackSoundBuffer = buffer);
-loadSound('sons/victory_sound.mp3').then(buffer => victorySoundBuffer = buffer);
-loadSound('sons/unlock_sound.mp3').then(buffer => unlockSoundBuffer = buffer);
+document.addEventListener('DOMContentLoaded', () => {
+    loadSound('sons/attack_sound.mp3').then(buffer => attackSoundBuffer = buffer);
+    loadSound('sons/victory_sound.mp3').then(buffer => victorySoundBuffer = buffer);
+    loadSound('sons/unlock_sound.mp3').then(buffer => unlockSoundBuffer = buffer);
+});
+
 
 const screens = {
     start: document.getElementById('start-screen'),
@@ -338,12 +364,13 @@ function switchScreen(screenName) {
 
 function updateBattleLog(message) {
     const log = document.getElementById('battle-log');
-    // Prepend new messages to keep history (optional, or just replace innerHTML)
-    log.innerHTML = `<p>${message}</p>` + log.innerHTML;
-    // Keep only the last few messages for readability
-    const paragraphs = log.getElementsByTagName('p');
-    if (paragraphs.length > 5) {
-        log.removeChild(paragraphs[paragraphs.length - 1]);
+    const p = document.createElement('p');
+    p.textContent = message;
+    log.prepend(p); // Add to the top
+    
+    // Keep only the last 5 messages for readability
+    while (log.children.length > 5) {
+        log.removeChild(log.lastChild);
     }
 }
 
@@ -362,32 +389,56 @@ function updateHealthBars() {
     villainHpText.textContent = `HP: ${Math.max(0, villain.hp)} / ${villain.maxHp}`;
 }
 
-function playerAttack() {
-    if (!isPlayerTurn) return;
-
-    let damage = 0;
+function applyStatusEffects() {
     let logMessage = '';
 
-    playSound(attackSoundBuffer);
-
+    // Apply hero poison damage
     if (heroPoisonTurns > 0) {
         const poisonDamage = 5;
         hero.hp -= poisonDamage;
         logMessage += `Herói sofre ${poisonDamage} de dano de veneno. `;
         heroPoisonTurns--;
-        if (hero.hp <= 0) {
-            updateHealthBars();
-            updateBattleLog(logMessage);
-            checkGameOver();
-            return;
-        }
+    }
+
+    // Apply villain poison damage
+    if (villainPoisonTurns > 0) {
+        const poisonDamage = 10;
+        villain.hp -= poisonDamage;
+        logMessage += `${villain.name} sofreu ${poisonDamage} de dano de veneno. `;
+        villainPoisonTurns--;
+    }
+
+    // Decrement status effect durations
+    if (isVillainWeakened > 0) isVillainWeakened--;
+    if (isVillainStunned > 0) isVillainStunned--;
+    if (villainConfused > 0) villainConfused--;
+
+    if (logMessage) {
+        updateBattleLog(logMessage.trim());
+        updateHealthBars();
+        checkGameOver();
+    }
+}
+
+function playerAttack() {
+    if (!isPlayerTurn) return;
+
+    let damage = hero.baseDamage;
+    let logMessage = '';
+
+    playSound(attackSoundBuffer);
+    applyStatusEffects(); // Apply effects before attack
+
+    if (hero.hp <= 0 || villain.hp <= 0) {
+        checkGameOver();
+        return;
     }
 
     switch (selectedCharacterId) {
         case 'sr_barriga':
             const isHeal = Math.random() < 0.3; // 30% chance to heal
             if (isHeal) {
-                const healAmount = 30;
+                const healAmount = Math.floor(Math.random() * 20) + 30; // 30-50 heal
                 hero.hp = Math.min(hero.maxHp, hero.hp + healAmount);
                 logMessage = `Sr. Barriga usou o Livro Místico e se curou em ${healAmount} pontos!`;
             } else {
@@ -395,91 +446,65 @@ function playerAttack() {
                 logMessage = `Sr. Barriga usou um feitiço poderoso e causou ${damage} de dano!`;
             }
             break;
-        case 'quico':
-            damage = 25;
-            logMessage = `Quico usou o Chute Quadrado e causou ${damage} de dano!`;
-            break;
         case 'chiquinha':
-            damage = 15;
             logMessage = `Chiquinha usou a Fúria do Cabelo e causou ${damage} de dano!`;
             if (Math.random() < 0.5) { // 50% chance for second hit
-                damage += 15;
+                damage += hero.baseDamage;
                 logMessage += ' Acertou uma segunda vez!';
             }
             break;
         case 'dona_florinda':
-            damage = 10;
-            isVillainWeakened = true;
+            isVillainWeakened = 1; // Weaken for 1 turn
             logMessage = `Dona Florinda usou o Grito Supersônico, causando ${damage} de dano e enfraquecendo o próximo ataque do inimigo!`;
             break;
         case 'chapolin_colorado':
-            damage = 50;
             logMessage = `Chapolin usou a Marreta Biônica e causou ${damage} de dano!`;
             if (Math.random() < 0.4) { // 40% chance to stun
-                isVillainStunned = true;
+                isVillainStunned = 1; // Stun for 1 turn
                 logMessage += ' O inimigo está atordoado!';
             }
             break;
         case 'dr_chapatin':
-            damage = 20;
-            villainPoisonTurns = 2;
+            villainPoisonTurns = 2; // Poison for 2 turns
             logMessage = `Dr. Chapatin aplicou uma Injeção Dolorosa, causando ${damage} de dano e envenenando o inimigo!`;
             break;
-        case 'chaves':
-            damage = 50;
-            logMessage = `Chaves usou o Piripaque e causou ${damage} de dano!`;
-            break;
-        case 'pancada_bonaparte': 
-            damage = 20;
-            logMessage = `Pancada Bonaparte usou o Chirrion! e causou ${damage} de dano!`;
-            break;
         case 'seu_madruga':
-            damage = 25;
             if (Math.random() < 0.3) {
                 heroEvadeNextAttack = true;
                 logMessage = `Seu Madruga tentou a Fuga do Aluguel! Há uma chance de ele evitar o próximo ataque.`;
+                damage = 0; // No direct damage if evading
             } else {
-                logMessage = `Seu Madruga tentou a Fuga do Aluguel, causando um pequeno dano de ${damage}.`;
+                logMessage = `Seu Madruga tentou a Fuga do Aluguel, causando ${damage} de dano.`;
             }
             break;
         case 'professor_girafales':
-            damage = 29;
+            logMessage = `Professor Girafales deu uma lição no inimigo, causando ${damage} de dano!`;
             if (Math.random() < 0.25) {
-                villainConfused = true;
-                logMessage = `Professor Girafales deu uma lição no inimigo, causando ${damage} de dano e o confundindo!`;
-            } else {
-                logMessage = `Professor Girafales deu uma lição no inimigo, causando ${damage} de dano!`;
+                villainConfused = 1; // Confuse for 1 turn
+                logMessage += ' O inimigo está confuso!';
             }
             break;
-        case 'dona_clotide':
-            damage = 28;
-            logMessage = `Dona Clotilde usou o Ataque de Vassoura e causou ${damage} de dano!`;
-            break;
-        case 'nhonho': 
-            damage = 40; 
-            logMessage = `Nhonho usou o Ataque de Peso e esmagou o inimigo, causando ${damage} de dano!`;
-            break;
         case 'paty': 
-            damage = 25;
             logMessage = `Paty usou o Ataque de Patada e causou ${damage} de dano!`;
             if (Math.random() < 0.3) { 
-                isVillainStunned = true;
+                isVillainStunned = 1; // Stun for 1 turn
                 logMessage += ' O inimigo está atordoado!';
             }
             break;
         case 'popis': 
-            damage = 10; 
-            villainPoisonTurns = 3; 
+            villainPoisonTurns = 3; // Poison for 3 turns
             logMessage = `Popis atirou pipocas explosivas, causando ${damage} de dano e envenenando o inimigo!`;
             break;
         case 'dona_neves': 
-            damage = 30;
             logMessage = `Dona Neves usou Nevasca Congelante, causando ${damage} de dano!`;
             if (Math.random() < 0.35) { 
-                isVillainStunned = true;
+                isVillainStunned = 1; // Stun for 1 turn
                 logMessage += ' O inimigo está congelado!';
             }
-            break; // Added break statement
+            break;
+        default: // For Quico, Pancada Bonaparte, Nhonho, Chaves, Dona Clotilde
+            logMessage = `${hero.name} usou ${hero.ability} e causou ${damage} de dano!`;
+            break;
     }
 
     if (damage > 0) {
@@ -501,47 +526,38 @@ function villainAttack() {
     if (isPlayerTurn) return;
 
     let logMessage = '';
+    applyStatusEffects(); // Apply effects before attack
+
+    if (hero.hp <= 0 || villain.hp <= 0) {
+        checkGameOver();
+        return;
+    }
 
     if (heroEvadeNextAttack) {
-        logMessage = `Seu Madruga conseguiu fugir do ataque de ${villain.name}!`;
-        heroEvadeNextAttack = false;
+        logMessage = `${hero.name} conseguiu fugir do ataque de ${villain.name}!`;
+        heroEvadeNextAttack = false; // Reset evade
         updateBattleLog(logMessage);
         isPlayerTurn = true;
         document.getElementById('attack-button').disabled = false;
         return;
     }
 
-    if (isVillainStunned) {
+    if (isVillainStunned > 0) {
         logMessage = `${villain.name} está atordoado e não pode atacar!`;
-        isVillainStunned = false;
         updateBattleLog(logMessage);
         isPlayerTurn = true;
         document.getElementById('attack-button').disabled = false;
         return;
     }
-
-    if (villainPoisonTurns > 0) {
-        const poisonDamage = 10;
-        villain.hp -= poisonDamage;
-        logMessage += `${villain.name} sofreu ${poisonDamage} de dano de veneno. `;
-        villainPoisonTurns--;
-        if (villain.hp <= 0) {
-            updateHealthBars();
-            updateBattleLog(logMessage);
-            setTimeout(checkGameOver, 1000);
-            return;
-        }
-    }
-
+    
     let damage = villain.attackDamage;
-    if (isVillainWeakened) {
-        damage = Math.floor(damage / 2);
-        isVillainWeakened = false;
+    if (isVillainWeakened > 0) {
+        damage = Math.floor(damage * 0.5); // 50% less damage
+        logMessage += `${villain.name}'s attack is weakened! `;
     }
-    if (villainConfused) {
-        damage = Math.floor(damage * Math.random());
-        villainConfused = false;
-        logMessage += `${villain.name} está confuso e seu ataque é fraco! `;
+    if (villainConfused > 0) {
+        damage = Math.floor(damage * (0.5 + Math.random() * 0.5)); // 50% to 100% of normal damage
+        logMessage += `${villain.name} está confuso e seu ataque é menos eficaz! `;
     }
 
     hero.hp -= damage;
@@ -576,29 +592,44 @@ function endGame(isVictory) {
 
     if (isVictory) {
         playSound(victorySoundBuffer);
-        currentVillainIndex++;
-        saveProgress();
-
-        let unlockedHero = null;
-        const initialUnlockedHeroes = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'];
-        // Filter for characters that are locked, not yet unlocked, and not part of the initial set
-        const heroesToUnlock = Object.values(characters).filter(c => c.locked && !unlockedHeroes.includes(c.id) && !initialUnlockedHeroes.includes(c.id));
         
-        if (heroesToUnlock.length > 0) {
-            unlockedHero = heroesToUnlock[0]; // Unlock the first available locked hero
-            unlockedHeroes.push(unlockedHero.id);
-            characters[unlockedHero.id].locked = false;
+        let unlockedHero = null;
+        // Check if there's a next villain
+        if (currentVillainIndex < villains.length - 1) {
+            currentVillainIndex++;
             saveProgress();
-        }
 
-        if (currentVillainIndex >= villains.length) {
-            title.innerText = "Vitória Final!";
-            message.innerText = `Você derrotou todos os vilões e salvou o multiverso! Parabéns, herói!`;
-            restartButton.innerText = 'Jogar Novamente';
-        } else {
+            // Unlock the next character in a predefined order if not already unlocked
+            const allCharacterIds = Object.keys(characters);
+            const charactersAvailableToUnlock = allCharacterIds.filter(id => 
+                !initialUnlockedCharacterIds.includes(id) && 
+                !unlockedHeroes.includes(id)
+            );
+
+            if (charactersAvailableToUnlock.length > 0) {
+                // Find the first character in the original 'characters' object order that is locked and not yet unlocked
+                const nextCharacterToUnlockId = Object.keys(characters).find(charId => 
+                    characters[charId].locked && !unlockedHeroes.includes(charId)
+                );
+
+                if (nextCharacterToUnlockId) {
+                    unlockedHero = characters[nextCharacterToUnlockId];
+                    unlockedHeroes.push(unlockedHero.id);
+                    characters[unlockedHero.id].locked = false;
+                    saveProgress();
+                }
+            }
             title.innerText = "Vitória!";
             message.innerText = `Você derrotou ${villain.name}! Mas um novo desafio aguarda...`;
             restartButton.innerText = 'Continuar Aventura';
+        } else {
+            // All villains defeated
+            title.innerText = "Vitória Final!";
+            message.innerText = `Você derrotou todos os vilões e salvou o multiverso! Parabéns, herói!`;
+            restartButton.innerText = 'Jogar Novamente';
+            // No new villain, so next time is a full reset
+            currentVillainIndex = villains.length; // Indicate all defeated
+            saveProgress();
         }
 
         if (unlockedHero) {
@@ -623,11 +654,11 @@ function resetGame() {
     localStorage.removeItem('game_unlocked_heroes');
     localStorage.removeItem('game_villain_index');
     currentVillainIndex = 0;
-    unlockedHeroes = [];
+    unlockedHeroes = [...initialUnlockedCharacterIds]; // Start with initial heroes unlocked
+    
     // Reset all characters to locked except the initial ones
-    const initialUnlockedHeroes = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'];
     for (const charId in characters) {
-        if (!initialUnlockedHeroes.includes(charId)) {
+        if (!initialUnlockedCharacterIds.includes(charId)) {
             characters[charId].locked = true;
         } else {
             characters[charId].locked = false; // Ensure initial heroes are unlocked
@@ -641,12 +672,12 @@ function setupBattle() {
     villain = { ...villains[currentVillainIndex] };
     villain.maxHp = villain.hp;
     isPlayerTurn = true;
-    isVillainWeakened = false;
-    isVillainStunned = false;
+    isVillainWeakened = 0;
+    isVillainStunned = 0;
     heroPoisonTurns = 0;
     villainPoisonTurns = 0;
     heroEvadeNextAttack = false;
-    villainConfused = false;
+    villainConfused = 0;
 
     const heroSide = document.getElementById('hero-side');
     heroSide.innerHTML = `
@@ -665,6 +696,7 @@ function setupBattle() {
     `;
 
     updateHealthBars();
+    document.getElementById('battle-log').innerHTML = '<p>A batalha começa! O que você vai fazer?</p>'; // Clear previous log
     updateBattleLog(`A batalha contra ${villain.name} começa!`);
     document.getElementById('attack-button').disabled = false;
     switchScreen('battle');
@@ -674,10 +706,17 @@ function populateCharacterSelection() {
     const characterList = document.getElementById('character-list');
     characterList.innerHTML = '';
 
+    // Ensure initial heroes are in unlockedHeroes array if not already there
+    initialUnlockedCharacterIds.forEach(id => {
+        if (!unlockedHeroes.includes(id)) {
+            unlockedHeroes.push(id);
+            characters[id].locked = false;
+        }
+    });
+
     for (const charId in characters) {
         const char = characters[charId];
-        const isInitiallyUnlocked = ['chiquinha', 'quico', 'dona_florinda', 'sr_barriga'].includes(char.id);
-        const isUnlocked = isInitiallyUnlocked || unlockedHeroes.includes(char.id);
+        const isUnlocked = unlockedHeroes.includes(char.id);
         
         const card = document.createElement('div');
         card.className = 'character-card';
@@ -719,14 +758,21 @@ function populateCharacterSelection() {
 function loadProgress() {
     const savedHeroes = localStorage.getItem('game_unlocked_heroes');
     const savedVillainIndex = localStorage.getItem('game_villain_index');
+    
+    // Always start with initial heroes unlocked by default
+    unlockedHeroes = [...initialUnlockedCharacterIds];
+
     if (savedHeroes) {
-        unlockedHeroes = JSON.parse(savedHeroes);
+        const loadedUnlockedHeroes = JSON.parse(savedHeroes);
+        // Merge loaded heroes with initial ones to ensure initial ones are always present
+        unlockedHeroes = [...new Set([...unlockedHeroes, ...loadedUnlockedHeroes])];
         unlockedHeroes.forEach(id => {
             if (characters[id]) {
                 characters[id].locked = false;
             }
         });
     }
+
     if (savedVillainIndex) {
         currentVillainIndex = parseInt(savedVillainIndex, 10);
     }
@@ -747,7 +793,7 @@ function init() {
     document.getElementById('attack-button').addEventListener('click', playerAttack);
     document.getElementById('restart-button').addEventListener('click', () => {
         if (currentVillainIndex >= villains.length) {
-            resetGame();
+            resetGame(); // Full reset if all villains were defeated
         }
         populateCharacterSelection();
         switchScreen('characterSelection');

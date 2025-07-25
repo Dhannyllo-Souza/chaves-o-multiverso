@@ -263,7 +263,7 @@ const villains = [
         description: "Uma versão do Professor Girafales que usa sua inteligência para o mal.",
     },
     {
-        name: "super_pistoleiro_veloz_sam_racha_cuca",
+        name: "Super Pistoleiro Veloz Sam Racha Cuca",
         image: "personagens/super_pistoleiro_veloz_sam_racha_cuca.png",
         hp: 900,
         attackDamage: 45,
@@ -419,7 +419,7 @@ function playerAttack() {
             logMessage = `Dona Florinda usou o Grito Supersônico, causando ${damage} de dano e enfraquecendo o próximo ataque do inimigo!`;
             break;
         case 'chapolin_colorado':
-            damage = 20;
+            damage = 55;
             logMessage = `Chapolin usou a Marreta Biônica e causou ${damage} de dano!`;
             if (Math.random() < 0.4) { // 40% chance to stun
                 isVillainStunned = true;
@@ -432,7 +432,7 @@ function playerAttack() {
             logMessage = `Dr. Chapatin aplicou uma Injeção Dolorosa, causando ${damage} de dano e envenenando o inimigo!`;
             break;
         case 'chaves':
-            damage = 40;
+            damage = 70;
             logMessage = `Chaves usou o Piripaque e causou ${damage} de dano!`;
             break;
         case 'pancada_bonaparte': // Corrected ID

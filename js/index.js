@@ -24,7 +24,7 @@ const characters = {
         ability: "Grito Supersônico",
         description: "Um grito devastador que enfraquece o próximo ataque do inimigo.",
         hp: 250,
-        locked: false,
+        locked: true,
     },
     sr_barriga: {
         id: 'sr_barriga',
@@ -33,7 +33,7 @@ const characters = {
         ability: "Livro Místico",
         description: "Usa um feitiço aleatório do livro que pode causar dano massivo ou curá-lo.",
         hp: 300,
-        locked: false,
+        locked: true,
     },
     dr_chapatin: {
         id: 'dr_chapatin',

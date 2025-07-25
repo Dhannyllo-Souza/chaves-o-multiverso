@@ -276,7 +276,7 @@ const villains = [
         name: "Dr. Chapatin Versão Negativo",
         image: "personagens/dr_chapatin_versao_negativo.png",
         hp: 650,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Uma versão sombria do Dr. Chapatin, mais perigosa e com poções venenosas.",
     },
     {

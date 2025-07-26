@@ -111,6 +111,8 @@ h1, h2 {
 .character-card.locked {
     cursor: not-allowed;
     filter: grayscale(80%) brightness(0.7);
+    /* Ensure image and text are visible even with filter */
+    color: rgba(0, 0, 0, 0.5); /* Dim text a bit */
 }
 
 /* Corrected lock icon to use SVG for better compatibility and appearance */

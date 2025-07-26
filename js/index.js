@@ -186,7 +186,7 @@ const characters = {
         ability: "Marreta Biônica",
         description: "Um golpe com sua marreta que pode atordoar o inimigo, fazendo-o perder a vez.",
         hp: 1050,
-        baseDamage: 40,
+        baseDamage: 35,
         locked: true,
     },
     chaves: {
@@ -196,7 +196,7 @@ const characters = {
         ability: "Piripaque",
         description: "Um ataque de pânico que, de alguma forma, causa dano ao inimigo por pura confusão.",
         hp: 1150,
-        baseDamage: 45,
+        baseDamage: 40,
         locked: true,
     },
 };
@@ -227,14 +227,14 @@ const villains = [
         name: "Peterete",
         image: "personagens/peterete.png",
         hp: 300,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Um gangster perigoso com um plano para tudo."
     },
     {
         name: "Racha Cuca",
         image: "personagens/racha_cuca.png",
         hp: 350,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Um cientista louco cujas invenções são imprevisíveis e perigosas."
     },
     {

@@ -6,7 +6,7 @@ const characters = {
         ability: "Fúria do Cabelo",
         description: "Ataque rápido que tem chance de atingir duas vezes.",
         hp: 150,
-        baseDamage: 30,
+        baseDamage: 25,
        locked: false,
     },
     quico: {
@@ -26,7 +26,7 @@ const characters = {
         ability: "Grito Supersônico",
         description: "Um grito devastador que enfraquece o próximo ataque do inimigo.",
         hp: 250,
-        baseDamage: 30,
+        baseDamage: 25,
         locked: true,
     },
     sr_barriga: {
@@ -36,7 +36,7 @@ const characters = {
         ability: "Livro Místico",
         description: "Usa um feitiço aleatório do livro que pode causar dano massivo ou curá-lo.",
         hp: 300,
-        baseDamage: 0, // Damage is variable
+        baseDamage: 30, // Damage is variable
         locked: true,
     },
     dr_chapatin: {
@@ -46,7 +46,7 @@ const characters = {
         ability: "Injeção Dolorosa",
         description: "Aplica uma injeção que causa dor e pode envenenar o inimigo.",
         hp: 350,
-        baseDamage: 30,
+        baseDamage: 25,
         locked: true,
     },
     dona_clotide: {
@@ -66,7 +66,7 @@ const characters = {
         ability: "Chirrion!",
         description: "Diz 'Chirrion!' tão repentinamente que causa dano de susto.",
         hp: 450,
-        baseDamage: 30,
+        baseDamage: 25,
         locked: true,
     },
     seu_madruga: {
@@ -106,7 +106,7 @@ const characters = {
         ability: "Ataque de Pipoquinha",
         description: "Ataca com pipocas explosivas que causam dano ao longo do tempo.",
         hp: 650,
-        baseDamage: 30,
+        baseDamage: 25,
         locked: true,
     },
     dona_neves: {
@@ -126,7 +126,7 @@ const characters = {
         ability: "Lecionar com Fúria",
         description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
         hp: 750,
-        baseDamage: 30,
+        baseDamage: 25,
         locked: true,
     },
     gloria: {
@@ -146,7 +146,7 @@ const characters = {
         ability: "Ataque de Preguiça",
         description: "Um ataque lento, mas com chance de causar dano massivo se o inimigo for pego desprevenido.", // Corrected description
         hp: 850,
-        baseDamage: 30,
+        baseDamage: 25,
         locked: true,
     },
     jaiminho: {
@@ -166,7 +166,7 @@ const characters = {
         ability: "Ataque de Loucura",
         description: "Um ataque imprevisível que pode causar dano alto ou baixo.",
         hp: 950,
-        baseDamage: 45,
+        baseDamage: 25,
         locked: true,
     },
     seu_madroga: {
@@ -176,7 +176,7 @@ const characters = {
         ability: "Ataque de Aluguel",
         description: "Um ataque que causa dano e pode reduzir o dano do próximo ataque do inimigo.",
         hp: 1000,
-        baseDamage: 40,
+        baseDamage: 30,
         locked: true,
     },
         chapolin_colorado: {
@@ -186,7 +186,7 @@ const characters = {
         ability: "Marreta Biônica",
         description: "Um golpe com sua marreta que pode atordoar o inimigo, fazendo-o perder a vez.",
         hp: 1050,
-        baseDamage: 50,
+        baseDamage: 40,
         locked: true,
     },
     chaves: {
@@ -196,7 +196,7 @@ const characters = {
         ability: "Piripaque",
         description: "Um ataque de pânico que, de alguma forma, causa dano ao inimigo por pura confusão.",
         hp: 1150,
-        baseDamage: 50,
+        baseDamage: 40,
         locked: true,
     },
 };
@@ -213,7 +213,7 @@ const villains = [
         name: "Tripa Seca",
         image: "personagens/tripa_seca.png",
         hp: 200,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Um bandido impiedoso que ataca sem hesitar."
     },
     {
@@ -227,7 +227,7 @@ const villains = [
         name: "Peterete",
         image: "personagens/peterete.png",
         hp: 300,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Um gangster perigoso com um plano para tudo."
     },
     {
@@ -269,7 +269,7 @@ const villains = [
         name: "Dom Caveira",
         image: "personagens/dom_caveira.png",
         hp: 600,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Invoca um espírito que causa dano e tem chance de amedrontar o inimigo.",
     },
     {
@@ -283,7 +283,7 @@ const villains = [
         name: "Alma Negra Versão Aprimorada",
         image: "personagens/alma_negra_versao_aprimorada.png",
         hp: 700,
-        attackDamage: 30, // Adjusted damage for 'aprimorada' version
+        attackDamage: 35, // Adjusted damage for 'aprimorada' version
         description: "O pirata mais temido dos sete mares, com ataques brutais.",
     },
     {
@@ -297,7 +297,7 @@ const villains = [
         name: "Racha Cuca Versão Aprimorada",
         image: "personagens/racha_cuca_versao_aprimorada.png",
         hp: 800,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Um cientista louco cujas invenções são imprevisíveis e perigosas.",
     },
     {
@@ -339,7 +339,7 @@ const villains = [
         name: "Chaves Versão Negativo",
         image: "personagens/chaves_versao_negativo.png",
         hp: 1100,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "A versão maligna do Chaves, com piripaques de pura destruição.",
     },
     {
@@ -353,7 +353,7 @@ const villains = [
         name: "Super Pistoleiro Veloz Sam Racha Cuca",
         image: "personagens/super_pistoleiro_veloz_sam_racha_cuca.png",
         hp: 1200,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Uma combinação de Super Sam, Pistoleiro Veloz e Racha Cuca, com ataques rápidos e imprevisíveis.",
     },
     {
@@ -367,7 +367,7 @@ const villains = [
         name: "Alma Dom Tripa Seca Caveira Negra",
         image: "personagens/alma_dom_tripa_seca_caveira_negra.png",
         hp: 1300,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Uma fusão de Alma Negra, Dom Caveira e Tripa Seca, com ataques combinados e habilidades únicas.",
     },
 ];

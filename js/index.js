@@ -213,7 +213,7 @@ const villains = [
         name: "Tripa Seca",
         image: "personagens/tripa_seca.png",
         hp: 200,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Um bandido impiedoso que ataca sem hesitar."
     },
     {
@@ -227,7 +227,7 @@ const villains = [
         name: "Peterete",
         image: "personagens/peterete.png",
         hp: 300,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Um gangster perigoso com um plano para tudo."
     },
     {
@@ -248,7 +248,7 @@ const villains = [
         name: "Pistoleiro Veloz",
         image: "personagens/pistoleiro_veloz.png",
         hp: 450,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "O pistoleiro mais rápido do oeste... ou assim ele diz."
     },
     {
@@ -262,7 +262,7 @@ const villains = [
         name: "Alma Negra",
         image: "personagens/alma_negra.png",
         hp: 550,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "O pirata mais temido dos sete mares, com ataques brutais."
     },
     {
@@ -276,7 +276,7 @@ const villains = [
         name: "Dr. Chapatin Versão Negativo",
         image: "personagens/dr_chapatin_versao_negativo.png",
         hp: 650,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Uma versão sombria do Dr. Chapatin, mais perigosa e com poções venenosas.",
     },
     {
@@ -290,7 +290,7 @@ const villains = [
         name: "Peterete Versão Aprimorada",
         image: "personagens/peterete_versao_aprimorada.png",
         hp: 750,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Um gangster perigoso com um plano para tudo.",
     },
     {
@@ -304,7 +304,7 @@ const villains = [
         name: "Mata Fácil",
         image: "personagens/mata_facil.png",
         hp: 850,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Um caçador implacável que não hesita em eliminar qualquer um que cruze seu caminho.",
     },
     {
@@ -318,7 +318,7 @@ const villains = [
         name: "Pouco Pelo",
         image: "personagens/pouco_pelo.png",
         hp: 950,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Um vilão astuto que usa sua inteligência para enganar e atacar seus oponentes.",
     },
     {
@@ -332,42 +332,42 @@ const villains = [
         name: "Chapolin Colorado Versão Negativo",
         image: "personagens/chapolin_colorado_versao_negativo.png",
         hp: 1050,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Uma versão distorcida do herói, usando sua marreta para o mal.",
     },
     {
         name: "Chaves Versão Negativo",
         image: "personagens/chaves_versao_negativo.png",
         hp: 1100,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "A versão maligna do Chaves, com piripaques de pura destruição.",
     },
     {
         name: "Girafales Colorado",
         image: "personagens/girafales_colorado.png",
         hp: 1150,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Uma versão do Professor Girafales que usa sua inteligência para o mal.",
     },
     {
         name: "Super Pistoleiro Veloz Sam Racha Cuca",
         image: "personagens/super_pistoleiro_veloz_sam_racha_cuca.png",
         hp: 1200,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Uma combinação de Super Sam, Pistoleiro Veloz e Racha Cuca, com ataques rápidos e imprevisíveis.",
     },
     {
         name: "Dr. Chapatin Poucas Trancas",
         image: "personagens/dr_chapatin_poucas_trancas.png",
         hp: 1250,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Uma versão combinada do Dr. Chapatin e Poucas Trancas, com ataques brutais e poções venenosas.",
     },
     {
         name: "Alma Dom Tripa Seca Caveira Negra",
         image: "personagens/alma_dom_tripa_seca_caveira_negra.png",
         hp: 1300,
-        attackDamage: 30,
+        attackDamage: 35,
         description: "Uma fusão de Alma Negra, Dom Caveira e Tripa Seca, com ataques combinados e habilidades únicas.",
     },
 ];

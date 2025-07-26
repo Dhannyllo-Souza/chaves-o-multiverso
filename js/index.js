@@ -17,7 +17,7 @@ const characters = {
         description: "Um chute poderoso que causa dano consistente ao inimigo.",
         hp: 200,
         baseDamage: 30,
-        locked: false,
+        locked: true,
     },
     dona_florinda: {
         id: 'dona_florinda',

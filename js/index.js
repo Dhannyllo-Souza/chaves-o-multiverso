@@ -6,8 +6,8 @@ const characters = {
         ability: "Fúria do Cabelo",
         description: "Ataque rápido que tem chance de atingir duas vezes.",
         hp: 150,
-        baseDamage: 15,
-        locked: false,
+        baseDamage: 30,
+       locked: false,
     },
     quico: {
         id: 'quico',
@@ -16,7 +16,7 @@ const characters = {
         ability: "Chute Quadrado",
         description: "Um chute poderoso que causa dano consistente ao inimigo.",
         hp: 200,
-        baseDamage: 25,
+        baseDamage: 30,
         locked: false,
     },
     dona_florinda: {
@@ -26,7 +26,7 @@ const characters = {
         ability: "Grito Supersônico",
         description: "Um grito devastador que enfraquece o próximo ataque do inimigo.",
         hp: 250,
-        baseDamage: 10,
+        baseDamage: 30,
         locked: true,
     },
     sr_barriga: {
@@ -46,7 +46,7 @@ const characters = {
         ability: "Injeção Dolorosa",
         description: "Aplica uma injeção que causa dor e pode envenenar o inimigo.",
         hp: 350,
-        baseDamage: 20,
+        baseDamage: 30,
         locked: true,
     },
     dona_clotide: {
@@ -56,7 +56,7 @@ const characters = {
         ability: "Ataque de Vassoura",
         description: "Uma bruxa com sua vassoura, que ataca com golpes surpreendentes.",
         hp: 400,
-        baseDamage: 28,
+        baseDamage: 30,
         locked: true,
     },
     pancada_bonaparte: {
@@ -66,7 +66,7 @@ const characters = {
         ability: "Chirrion!",
         description: "Diz 'Chirrion!' tão repentinamente que causa dano de susto.",
         hp: 450,
-        baseDamage: 20,
+        baseDamage: 30,
         locked: true,
     },
     seu_madruga: {
@@ -76,7 +76,7 @@ const characters = {
         ability: "Fuga do Aluguel",
         description: "Tenta evitar o ataque inimigo, com chance de não sofrer dano no próximo turno.",
         hp: 500,
-        baseDamage: 25,
+        baseDamage: 30,
         locked: true,
     },
     nhonho: {
@@ -96,7 +96,7 @@ const characters = {
         ability: "Ataque de Patada",
         description: "Uma patada rápida que causa dano e pode atordoar o inimigo.",
         hp: 600,
-        baseDamage: 25,
+        baseDamage: 30,
         locked: true,
     },
     popis: {
@@ -106,7 +106,7 @@ const characters = {
         ability: "Ataque de Pipoquinha",
         description: "Ataca com pipocas explosivas que causam dano ao longo do tempo.",
         hp: 650,
-        baseDamage: 10,
+        baseDamage: 30,
         locked: true,
     },
     dona_neves: {
@@ -126,7 +126,7 @@ const characters = {
         ability: "Lecionar com Fúria",
         description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
         hp: 750,
-        baseDamage: 29,
+        baseDamage: 30,
         locked: true,
     },
     gloria: {
@@ -146,7 +146,7 @@ const characters = {
         ability: "Ataque de Preguiça",
         description: "Um ataque lento, mas com chance de causar dano massivo se o inimigo for pego desprevenido.", // Corrected description
         hp: 850,
-        baseDamage: 60,
+        baseDamage: 30,
         locked: true,
     },
     jaiminho: {
@@ -156,7 +156,7 @@ const characters = {
         ability: "Entrega Relâmpago",
         description: "Um ataque rápido que causa dano e pode confundir o inimigo.",
         hp: 900,
-        baseDamage: 35,
+        baseDamage: 30,
         locked: true,
     },
     lucas_pirado: {
@@ -206,35 +206,35 @@ const villains = [
         name: "Super Sam",
         image: "personagens/super_sam.png",
         hp: 150,
-        attackDamage: 25,
+        attackDamage: 30,
         description: "Golpeia o inimigo com um saco de dinheiro. Eficaz e capitalista!",
     },
     {
         name: "Tripa Seca",
         image: "personagens/tripa_seca.png",
         hp: 200,
-        attackDamage: 20,
+        attackDamage: 30,
         description: "Um bandido impiedoso que ataca sem hesitar."
     },
     {
         name: "Quase Nada",
         image: "personagens/quase_nada.png",
         hp: 250,
-        attackDamage: 22,
+        attackDamage: 30,
         description: "Tão pequeno que seus ataques são difíceis de prever."
     },
     {
         name: "Peterete",
         image: "personagens/peterete.png",
         hp: 300,
-        attackDamage: 25,
+        attackDamage: 30,
         description: "Um gangster perigoso com um plano para tudo."
     },
     {
         name: "Racha Cuca",
         image: "personagens/racha_cuca.png",
         hp: 350,
-        attackDamage: 28,
+        attackDamage: 35,
         description: "Um cientista louco cujas invenções são imprevisíveis e perigosas."
     },
     {
@@ -290,14 +290,14 @@ const villains = [
         name: "Peterete Versão Aprimorada",
         image: "personagens/peterete_versao_aprimorada.png",
         hp: 750,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Um gangster perigoso com um plano para tudo.",
     },
     {
         name: "Racha Cuca Versão Aprimorada",
         image: "personagens/racha_cuca_versao_aprimorada.png",
         hp: 800,
-        attackDamage: 40,
+        attackDamage: 30,
         description: "Um cientista louco cujas invenções são imprevisíveis e perigosas.",
     },
     {
@@ -327,7 +327,6 @@ const villains = [
         hp: 1000,
         attackDamage: 40,
         description: "Um brutamontes que ataca com força descomunal, deixando seus inimigos sem fôlego.",
-
     },
     {
         name: "Chapolin Colorado Versão Negativo",
@@ -354,14 +353,14 @@ const villains = [
         name: "Super Pistoleiro Veloz Sam Racha Cuca",
         image: "personagens/super_pistoleiro_veloz_sam_racha_cuca.png",
         hp: 1200,
-        attackDamage: 45,
+        attackDamage: 30,
         description: "Uma combinação de Super Sam, Pistoleiro Veloz e Racha Cuca, com ataques rápidos e imprevisíveis.",
     },
     {
         name: "Dr. Chapatin Poucas Trancas",
         image: "personagens/dr_chapatin_poucas_trancas.png",
         hp: 1250,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Uma versão combinada do Dr. Chapatin e Poucas Trancas, com ataques brutais e poções venenosas.",
     },
     {

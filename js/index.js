@@ -213,7 +213,7 @@ const villains = [
         name: "Tripa Seca",
         image: "personagens/tripa_seca.png",
         hp: 200,
-        attackDamage: 35,
+        attackDamage: 31,
         description: "Um bandido impiedoso que ataca sem hesitar."
     },
     {

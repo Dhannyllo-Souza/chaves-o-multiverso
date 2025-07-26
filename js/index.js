@@ -213,7 +213,7 @@ const villains = [
         name: "Tripa Seca",
         image: "personagens/tripa_seca.png",
         hp: 200,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Um bandido impiedoso que ataca sem hesitar."
     },
     {
@@ -234,7 +234,7 @@ const villains = [
         name: "Racha Cuca",
         image: "personagens/racha_cuca.png",
         hp: 350,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Um cientista louco cujas invenções são imprevisíveis e perigosas."
     },
     {
@@ -255,7 +255,7 @@ const villains = [
         name: "Poucas Trancas",
         image: "personagens/poucas_trancas.png",
         hp: 500,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Um bandido forte e de poucas palavras. Seus punhos falam por ele."
     },
     {
@@ -269,7 +269,7 @@ const villains = [
         name: "Dom Caveira",
         image: "personagens/dom_caveira.png",
         hp: 600,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Invoca um espírito que causa dano e tem chance de amedrontar o inimigo.",
     },
     {
@@ -283,7 +283,7 @@ const villains = [
         name: "Alma Negra Versão Aprimorada",
         image: "personagens/alma_negra_versao_aprimorada.png",
         hp: 700,
-        attackDamage: 35, // Adjusted damage for 'aprimorada' version
+        attackDamage: 30, // Adjusted damage for 'aprimorada' version
         description: "O pirata mais temido dos sete mares, com ataques brutais.",
     },
     {
@@ -297,7 +297,7 @@ const villains = [
         name: "Racha Cuca Versão Aprimorada",
         image: "personagens/racha_cuca_versao_aprimorada.png",
         hp: 800,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Um cientista louco cujas invenções são imprevisíveis e perigosas.",
     },
     {
@@ -311,7 +311,7 @@ const villains = [
         name: "Panca Louca",
         image: "personagens/panca_louca.png",
         hp: 900,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Um lutador imprevisível que ataca com força bruta e movimentos erráticos.",
     },
     {
@@ -325,7 +325,7 @@ const villains = [
         name: "Rasga Bucho",
         image: "personagens/rasga_bucho.png",
         hp: 1000,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Um brutamontes que ataca com força descomunal, deixando seus inimigos sem fôlego.",
     },
     {
@@ -339,7 +339,7 @@ const villains = [
         name: "Chaves Versão Negativo",
         image: "personagens/chaves_versao_negativo.png",
         hp: 1100,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "A versão maligna do Chaves, com piripaques de pura destruição.",
     },
     {
@@ -353,7 +353,7 @@ const villains = [
         name: "Super Pistoleiro Veloz Sam Racha Cuca",
         image: "personagens/super_pistoleiro_veloz_sam_racha_cuca.png",
         hp: 1200,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Uma combinação de Super Sam, Pistoleiro Veloz e Racha Cuca, com ataques rápidos e imprevisíveis.",
     },
     {
@@ -367,7 +367,7 @@ const villains = [
         name: "Alma Dom Tripa Seca Caveira Negra",
         image: "personagens/alma_dom_tripa_seca_caveira_negra.png",
         hp: 1300,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Uma fusão de Alma Negra, Dom Caveira e Tripa Seca, com ataques combinados e habilidades únicas.",
     },
 ];

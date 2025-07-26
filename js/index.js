@@ -220,84 +220,84 @@ const villains = [
         name: "Quase Nada",
         image: "personagens/quase_nada.png",
         hp: 250,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "Tão pequeno que seus ataques são difíceis de prever."
     },
     {
         name: "Peterete",
         image: "personagens/peterete.png",
         hp: 300,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "Um gangster perigoso com um plano para tudo."
     },
     {
         name: "Racha Cuca",
         image: "personagens/racha_cuca.png",
         hp: 350,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "Um cientista louco cujas invenções são imprevisíveis e perigosas."
     },
     {
         name: "Bruxa Baratuxa",
         image: "personagens/bruxa_baratuxa.png",
         hp: 400,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "Uma bruxa poderosa com feitiços malignos e uma gargalhada assustadora."
     },
     {
         name: "Pistoleiro Veloz",
         image: "personagens/pistoleiro_veloz.png",
         hp: 450,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "O pistoleiro mais rápido do oeste... ou assim ele diz."
     },
     {
         name: "Mata Fácil",
         image: "personagens/mata_facil.png",
         hp: 850,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "Um caçador implacável que não hesita em eliminar qualquer um que cruze seu caminho.",
     },
     {
         name: "Panca Louca",
         image: "personagens/panca_louca.png",
         hp: 900,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "Um lutador imprevisível que ataca com força bruta e movimentos erráticos.",
     },
     {
         name: "Pouco Pelo",
         image: "personagens/pouco_pelo.png",
         hp: 950,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "Um vilão astuto que usa sua inteligência para enganar e atacar seus oponentes.",
     },
     {
         name: "Rasga Bucho",
         image: "personagens/rasga_bucho.png",
         hp: 1000,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "Um brutamontes que ataca com força descomunal, deixando seus inimigos sem fôlego.",
     },
     {
         name: "Poucas Trancas",
         image: "personagens/poucas_trancas.png",
         hp: 500,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "Um bandido forte e de poucas palavras. Seus punhos falam por ele."
     },
     {
         name: "Alma Negra",
         image: "personagens/alma_negra.png",
         hp: 550,
-        attackDamage: 32,
+        attackDamage: 31,
         description: "O pirata mais temido dos sete mares, com ataques brutais."
     },
     {
         name: "Dom Caveira",
         image: "personagens/dom_caveira.png",
         hp: 600,
-        attackDamage: 32,
+        attackDamage: 3,
         description: "Invoca um espírito que causa dano e tem chance de amedrontar o inimigo.",
     },
     {

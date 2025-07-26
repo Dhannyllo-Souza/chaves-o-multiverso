@@ -7,7 +7,7 @@ const characters = {
         description: "Ataque rápido que tem chance de atingir duas vezes.",
         hp: 150,
         baseDamage: 25,
-       locked: false,
+        locked: false,
     },
     quico: {
         id: 'quico',
@@ -179,7 +179,7 @@ const characters = {
         baseDamage: 30,
         locked: true,
     },
-        chapolin_colorado: {
+    chapolin_colorado: {
         id: 'chapolin_colorado',
         name: "Chapolin Colorado",
         image: "personagens/chapolin_colorado.png",
@@ -386,7 +386,7 @@ let villainConfused = 0; // Duration for confusion
 let unlockedHeroes = [];
 let currentVillainIndex = 0;
 
-const initialUnlockedCharacterIds = ['chiquinha', 'quico']; // Changed initial unlocked characters to only Chiquinha and Quico, as Dona Florinda and Sr. Barriga are marked as locked in 'characters' object. If you want them unlocked from start, set their 'locked' property to false.
+const initialUnlockedCharacterIds = ['chiquinha']; // Changed initial unlocked characters to only Chiquinha
 
 // Audio context for sound effects
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -723,7 +723,8 @@ function resetGame() {
     localStorage.removeItem('game_unlocked_heroes');
     localStorage.removeItem('game_villain_index');
     currentVillainIndex = 0;
-    unlockedHeroes = [...initialUnlockedCharacterIds]; // Start with initial heroes unlocked
+    unlockedHeroes = []; // Clear unlocked heroes
+    initialUnlockedCharacterIds.forEach(id => unlockedHeroes.push(id)); // Add initial heroes
 
     // Reset all characters to locked except the initial ones
     for (const charId in characters) {
@@ -765,7 +766,7 @@ function setupBattle() {
     `;
 
     updateHealthBars();
-    document.getElementById('battle-log').innerHTML = '<p>A batalha começa! O que você vai fazer?</p>'; // Clear previous log
+    document.getElementById('battle-log').innerHTML = ''; // Clear previous log
     updateBattleLog(`A batalha contra ${villain.name} começa!`);
     document.getElementById('attack-button').disabled = false;
     switchScreen('battle');
@@ -783,8 +784,17 @@ function populateCharacterSelection() {
         }
     });
 
-    for (const charId in characters) {
-        const char = characters[charId];
+    // Sort characters to display unlocked first, then locked alphabetically
+    const sortedCharacters = Object.values(characters).sort((a, b) => {
+        const aUnlocked = unlockedHeroes.includes(a.id);
+        const bUnlocked = unlockedHeroes.includes(b.id);
+
+        if (aUnlocked && !bUnlocked) return -1;
+        if (!aUnlocked && bUnlocked) return 1;
+        return a.name.localeCompare(b.name);
+    });
+
+    sortedCharacters.forEach(char => {
         const isUnlocked = unlockedHeroes.includes(char.id);
 
         const card = document.createElement('div');
@@ -792,7 +802,7 @@ function populateCharacterSelection() {
         if (!isUnlocked) {
             card.classList.add('locked');
         }
-        card.dataset.charId = charId;
+        card.dataset.charId = char.id;
         card.innerHTML = `
             ${!isUnlocked ? '<div class="lock-icon"></div>' : ''}
             <img src="${char.image}" alt="${char.name}">
@@ -807,12 +817,12 @@ function populateCharacterSelection() {
                     currentSelected.classList.remove('selected');
                 }
                 card.classList.add('selected');
-                selectedCharacterId = charId;
+                selectedCharacterId = char.id;
                 document.getElementById('select-character-button').disabled = false;
             });
         }
         characterList.appendChild(card);
-    }
+    });
 
     const title = document.getElementById('character-selection-title');
     if (currentVillainIndex > 0 && currentVillainIndex < villains.length) {
@@ -834,10 +844,9 @@ function loadProgress() {
     if (savedHeroes) {
         const loadedUnlockedHeroes = JSON.parse(savedHeroes);
         // Merge loaded heroes with initial ones to ensure initial ones are always present
-        unlockedHeroes = [...new Set([...unlockedHeroes, ...loadedUnlockedHeroes])];
-        unlockedHeroes.forEach(id => {
-            if (characters[id]) {
-                characters[id].locked = false;
+        loadedUnlockedHeroes.forEach(id => {
+            if (!unlockedHeroes.includes(id)) {
+                unlockedHeroes.push(id);
             }
         });
     }
@@ -846,6 +855,8 @@ function loadProgress() {
     for (const charId in characters) {
         if (!unlockedHeroes.includes(charId)) {
             characters[charId].locked = true;
+        } else {
+            characters[charId].locked = false;
         }
     }
 

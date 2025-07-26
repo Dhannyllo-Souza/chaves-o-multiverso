@@ -227,7 +227,7 @@ const villains = [
         name: "Peterete",
         image: "personagens/peterete.png",
         hp: 300,
-        attackDamage: 35,
+        attackDamage: 30,
         description: "Um gangster perigoso com um plano para tudo."
     },
     {

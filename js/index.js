@@ -196,7 +196,7 @@ const characters = {
         ability: "Piripaque",
         description: "Um ataque de pânico que, de alguma forma, causa dano ao inimigo por pura confusão.",
         hp: 1150,
-        baseDamage: 40,
+        baseDamage: 45,
         locked: true,
     },
 };
@@ -255,7 +255,7 @@ const villains = [
         name: "Poucas Trancas",
         image: "personagens/poucas_trancas.png",
         hp: 500,
-        attackDamage: 40,
+        attackDamage: 35,
         description: "Um bandido forte e de poucas palavras. Seus punhos falam por ele."
     },
     {
@@ -325,7 +325,7 @@ const villains = [
         name: "Rasga Bucho",
         image: "personagens/rasga_bucho.png",
         hp: 1000,
-        attackDamage: 40,
+        attackDamage: 35,
         description: "Um brutamontes que ataca com força descomunal, deixando seus inimigos sem fôlego.",
     },
     {

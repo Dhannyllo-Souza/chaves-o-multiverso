@@ -26,7 +26,7 @@ const characters = {
         ability: "Grito Supersônico",
         description: "Um grito devastador que enfraquece o próximo ataque do inimigo.",
         hp: 250,
-        baseDamage: 25,
+        baseDamage: 28,
         locked: true,
     },
     sr_barriga: {
@@ -46,7 +46,7 @@ const characters = {
         ability: "Injeção Dolorosa",
         description: "Aplica uma injeção que causa dor e pode envenenar o inimigo.",
         hp: 350,
-        baseDamage: 25,
+        baseDamage: 28,
         locked: true,
     },
     dona_clotide: {
@@ -66,7 +66,7 @@ const characters = {
         ability: "Chirrion!",
         description: "Diz 'Chirrion!' tão repentinamente que causa dano de susto.",
         hp: 450,
-        baseDamage: 25,
+        baseDamage: 28,
         locked: true,
     },
     seu_madruga: {
@@ -106,7 +106,7 @@ const characters = {
         ability: "Ataque de Pipoquinha",
         description: "Ataca com pipocas explosivas que causam dano ao longo do tempo.",
         hp: 650,
-        baseDamage: 25,
+        baseDamage: 28,
         locked: true,
     },
     dona_neves: {
@@ -126,7 +126,7 @@ const characters = {
         ability: "Lecionar com Fúria",
         description: "Dá uma lição no inimigo, causando dano e possivelmente o confundindo.",
         hp: 750,
-        baseDamage: 25,
+        baseDamage: 28,
         locked: true,
     },
     gloria: {
@@ -146,7 +146,7 @@ const characters = {
         ability: "Ataque de Preguiça",
         description: "Um ataque lento, mas com chance de causar dano massivo se o inimigo for pego desprevenido.",
         hp: 850,
-        baseDamage: 25,
+        baseDamage: 28,
         locked: true,
     },
     jaiminho: {
@@ -166,7 +166,7 @@ const characters = {
         ability: "Ataque de Loucura",
         description: "Um ataque imprevisível que pode causar dano alto ou baixo.",
         hp: 950,
-        baseDamage: 25,
+        baseDamage: 28,
         locked: true,
     },
     seu_madroga: {
